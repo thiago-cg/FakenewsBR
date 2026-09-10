@@ -1,0 +1,14 @@
+{
+  ".claude/settings.local.json": {
+    "mtime": 1789002019.5974782,
+    "seen": 1789002251.318209,
+    "ast_hash": "e4f5b4f91d6764429ab1cecede2e26cb",
+    "semantic_hash": "e4f5b4f91d6764429ab1cecede2e26cb"
+  },
+  "README.md": {
+    "mtime": 1789001488.3114114,
+    "seen": 1789002251.318209,
+    "ast_hash": "11d3735ae1486f1862484341a4efafd8",
+    "semantic_hash": "11d3735ae1486f1862484341a4efafd8"
+  }
+}

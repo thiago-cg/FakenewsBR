@@ -1,0 +1,315 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "fakenewsbr_dataset_composition",
+        "label": "FakenewsBR dataset composition and task",
+        "nodes": [
+          "readme_fakenewsbr_factchecked_csv",
+          "readme_normalized_veracity_label",
+          "readme_source_type_taxonomy",
+          "readme_fact_checking_metadata",
+          "readme_binary_text_classification"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.8,
+        "source_file": "README.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "readme_brazilian_portuguese_nlp",
+      "label": "Brazilian Portuguese NLP",
+      "author": null,
+      "captured_at": null,
+      "community": 0,
+      "community_name": "Brazilian Misinformation Research",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "brazilian portuguese nlp",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "readme_misinformation_detection",
+      "label": "Misinformation and fake news detection",
+      "author": null,
+      "captured_at": null,
+      "community": 0,
+      "community_name": "Brazilian Misinformation Research",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "misinformation and fake news detection",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "readme_fakenews_data_repository",
+      "label": "AKCIT-FN/fakenews-data repository",
+      "author": null,
+      "captured_at": null,
+      "community": 0,
+      "community_name": "Brazilian Misinformation Research",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "akcit-fn/fakenews-data repository",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": "https://github.com/AKCIT-FN/fakenews-data"
+    },
+    {
+      "id": "readme_fakenewsbr",
+      "label": "FakenewsBR",
+      "author": null,
+      "captured_at": null,
+      "community": 0,
+      "community_name": "Brazilian Misinformation Research",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "fakenewsbr",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "readme_fact_checking_metadata",
+      "label": "Fact-checking metadata",
+      "author": null,
+      "captured_at": null,
+      "community": 1,
+      "community_name": "Dataset Structure & Labels",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "fact-checking metadata",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "readme_normalized_veracity_label",
+      "label": "Normalized binary veracity label",
+      "author": null,
+      "captured_at": null,
+      "community": 1,
+      "community_name": "Dataset Structure & Labels",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "normalized binary veracity label",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "readme_source_type_taxonomy",
+      "label": "Source type taxonomy (news, tweets, WhatsApp messages)",
+      "author": null,
+      "captured_at": null,
+      "community": 1,
+      "community_name": "Dataset Structure & Labels",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "source type taxonomy (news, tweets, whatsapp messages)",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "readme_fakenewsbr_factchecked_csv",
+      "label": "FakenewsBR_factchecked.csv",
+      "author": null,
+      "captured_at": null,
+      "community": 1,
+      "community_name": "Dataset Structure & Labels",
+      "contributor": null,
+      "file_type": "document",
+      "norm_label": "fakenewsbr_factchecked.csv",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "readme_binary_text_classification",
+      "label": "Binary text classification",
+      "author": null,
+      "captured_at": null,
+      "community": 2,
+      "community_name": "Classification Task & Text Fields",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "binary text classification",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null
+    },
+    {
+      "id": "readme_text_normalization_fields",
+      "label": "Text normalization and cleaning fields",
+      "author": null,
+      "captured_at": null,
+      "community": 2,
+      "community_name": "Classification Task & Text Fields",
+      "contributor": null,
+      "file_type": "rationale",
+      "norm_label": "text normalization and cleaning fields",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null
+    }
+  ],
+  "links": [
+    {
+      "source": "readme_binary_text_classification",
+      "target": "readme_normalized_veracity_label",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_fakenewsbr",
+      "target": "readme_binary_text_classification",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_fakenewsbr",
+      "target": "readme_brazilian_portuguese_nlp",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_fakenewsbr",
+      "target": "readme_misinformation_detection",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_fakenewsbr",
+      "target": "readme_fakenews_data_repository",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_fakenewsbr",
+      "target": "readme_fakenewsbr_factchecked_csv",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_fakenewsbr_factchecked_csv",
+      "target": "readme_fact_checking_metadata",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_fakenewsbr_factchecked_csv",
+      "target": "readme_normalized_veracity_label",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_fakenewsbr_factchecked_csv",
+      "target": "readme_source_type_taxonomy",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_fakenewsbr_factchecked_csv",
+      "target": "readme_text_normalization_fields",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_fact_checking_metadata",
+      "target": "readme_normalized_veracity_label",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_text_normalization_fields",
+      "target": "readme_binary_text_classification",
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "readme_fakenews_data_repository",
+      "target": "readme_fakenewsbr_factchecked_csv",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "fakenewsbr_dataset_composition",
+      "label": "FakenewsBR dataset composition and task",
+      "nodes": [
+        "readme_fakenewsbr_factchecked_csv",
+        "readme_normalized_veracity_label",
+        "readme_source_type_taxonomy",
+        "readme_fact_checking_metadata",
+        "readme_binary_text_classification"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.8,
+      "source_file": "README.md"
+    }
+  ],
+  "built_at_commit": "e30191221ccc7c8c60cd6d4ab7d6f8f7617cd055"
+}
