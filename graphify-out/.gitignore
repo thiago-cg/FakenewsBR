@@ -1,0 +1,5 @@
+# Sidecars transitórios com caminhos absolutos da máquina.
+.graphify_python
+.graphify_root
+.graphify_labels.json
+cache/
