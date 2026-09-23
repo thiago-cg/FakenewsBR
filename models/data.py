@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-DEFAULT_CSV = r"C:\Users\tito\OneDrive\Documentos\Projetos\FakenewsBR\FakenewsBR_sanitized.csv"
+DEFAULT_CSV = "data/FakenewsBR_sanitized.csv"  # relativo a raiz do repo
 TEXT_COL = "text_no_url"
 
 # Grupos onde o rotulo NAO e determinado pela origem (classe minoritaria >= 15%)
@@ -44,6 +44,37 @@ CHANNEL_OF = {
     "true": "press_true",
     "MuMiN-PT": "social", "MuMiN-PT_raw": "social",
 }
+
+
+def channel_of(group: str) -> str:
+    """Canal por grupo, com fallback por prefixo para a expansao v2.
+
+    A v1 nao tem grupos `FC_*`/`NEWS_*`, entao este fallback nao altera
+    nenhum resultado da v1. Ele existe para os datasets novos:
+      FC_*_VIRAL -> social       (texto viral de WhatsApp/redes)
+      FC_*       -> agency_claim (alegacao de checador)
+      NEWS_*     -> press_true   (manchete de portal)
+    """
+    if group in CHANNEL_OF:
+        return CHANNEL_OF[group]
+    g = str(group)
+    if g.startswith("FC_") and g.endswith("_VIRAL"):
+        return "social"
+    if g.startswith("FC_"):
+        return "agency_claim"
+    if g.startswith("EXT_"):
+        return "external_claim"
+    if g.startswith("NEWS_"):
+        return "press_true"
+    return "other"
+
+
+# Nº mínimo de linhas e fração mínima da classe minoritária para um grupo novo
+# poder treinar a cabeça DFR. A v1 usa a lista fixa `BALANCED_GROUPS`;
+# a expansão v2 aceita grupos `FC_*`/`EXT_*` desde que sejam informativos.
+NEW_GROUP_PREFIXES = ("FC_", "EXT_", "NEWS_")
+MIN_BALANCED_N = 200
+MIN_MINORITY_FRAC = 0.15
 
 # Features estilisticas em taxa. `word_len` fica de fora por padrao: e o atalho
 # mais contaminado da base (r = -0,13 com fake). Habilitar so para medir o efeito.
@@ -82,20 +113,54 @@ def _rating_class(raw) -> str:
     return "other"
 
 
-def load(csv: str = DEFAULT_CSV, include_length: bool = False) -> pd.DataFrame:
+def load(csv: str = DEFAULT_CSV, include_length: bool = False,
+         provenance_csv: str | None = None,
+         labels_csv: str | None = None) -> pd.DataFrame:
     df = pd.read_csv(csv, low_memory=False)
+    if labels_csv:
+        # treina somente nas linhas com rotulo de treino (camadas v1/checker/
+        # checker_match/llm_local de alta confianca/corroboracao); as linhas
+        # por procedencia (NEWS_*) ficam de fora por terem train_label vazio
+        lab = pd.read_csv(labels_csv, low_memory=False)
+        cols = [c for c in ("rid", "train_label", "label_tier", "auto_label",
+                            "confidence", "method") if c in lab.columns]
+        df = df.merge(lab[cols], on="rid", how="left")
+        df["label_orig"] = df["label"]
+        df["label"] = df["train_label"]
     df = df[df["label"].isin(["fake", "true"])].copy()
     df = df.dropna(subset=[TEXT_COL])
     df = df[df[TEXT_COL].astype(str).str.strip() != ""]
 
     df["target"] = (df["label"] == "fake").astype(int)
     df["group"] = df["dataset_name"].astype(str)
-    df["channel"] = df["group"].map(CHANNEL_OF).fillna("other")
-    df["is_balanced_group"] = df["group"].isin(BALANCED_GROUPS)
+    df["channel"] = df["group"].map(channel_of)
+    # grupos novos (`FC_*`/`NEWS_*`) so treinam a cabeça DFR se tiverem massa e
+    # as duas classes; a lista fixa da v1 permanece exatamente como estava.
+    new_prefix = df["group"].str.startswith(NEW_GROUP_PREFIXES)
+    info = []
+    for _, sub in df.groupby("group"):
+        if len(sub) == 0:
+            continue
+        frac = sub["target"].mean()
+        info.append((sub["group"].iloc[0], len(sub),
+                     min(frac, 1 - frac) >= MIN_MINORITY_FRAC))
+    informative = {g for g, n, ok in info
+                   if n >= MIN_BALANCED_N and ok and g.startswith(NEW_GROUP_PREFIXES)}
+    df["is_balanced_group"] = df["group"].isin(BALANCED_GROUPS) | (
+        new_prefix & df["group"].isin(informative))
 
     urls = df["url_review"].fillna("") + " " + df["factcheck_url"].fillna("")
-    df["is_ptpt"] = urls.str.contains("poligrafo|observador", case=False, regex=True)
+    df["is_ptpt"] = urls.str.contains(
+        r"poligrafo|observador|eco\.sapo\.pt", case=False, regex=True)
     df["rating_class"] = df["factcheck_rating"].apply(_rating_class)
+
+    if provenance_csv:
+        try:
+            prov = pd.read_csv(provenance_csv, low_memory=False)
+            keep = [c for c in prov.columns if c != "rid"]
+            df = df.merge(prov[["rid"] + keep], on="rid", how="left")
+        except FileNotFoundError:
+            pass
 
     w = df["word_len"].fillna(0).clip(lower=0)
     denom = w + 1.0

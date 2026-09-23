@@ -1,0 +1,18 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.6779,
+    "val_loss": 0.65861,
+    "val_macro_f1": 0.61502,
+    "val_f1_fake": 0.63645,
+    "val_worst_group": 0.4091,
+    "val_ece": 0.04652,
+    "tokens_per_s": 307.7,
+    "samples_per_s": 5.1,
+    "lr_last": 0.0,
+    "scaler_scale": 0.0,
+    "vram_peak_gb": 0.0,
+    "seconds": 253.6,
+    "best_so_far": true
+  }
+]

@@ -1,0 +1,22 @@
+[source-leak] grupos=25 | treino=62985 teste=13496
+[source-leak] prever GRUPO pelo texto: acc=0.6419 macro-F1=0.3537 | baseline maioria grupo=0.2261
+[source-leak] referencia: prever ROTULO pelo texto (sempre fake)=0.7310
+[source-leak] rotulo previsto SO pela fonte (prior por grupo): acc=0.8055 vs sempre-fake=0.7310
+[source-leak] procedencia-so: acc=0.8055 macro-F1=0.7474 F1-fake=0.8685 ECE=0.0281 pior-grupo=0.2717
+
+[source-leak] maiores confusionamentos (grupo real -> previsto):
+  fakes                    -> fakes                    n=2643
+  FC_POLIGRAFO             -> FC_POLIGRAFO             n=1624
+  FC_BOATOS                -> FC_BOATOS                n=1067
+  Fake.br                  -> Fake.br                  n=1034
+  EXT_LIARBR               -> EXT_LIARBR               n=858
+  FakeWhatsApp.BR_2018     -> FakeWhatsApp.BR_2018     n=599
+  FC_BOATOS                -> fakes                    n=494
+  true                     -> fakes                    n=353
+  FakeWhatsApp.BR_2018     -> fakes                    n=278
+  FC_EFARSAS               -> fakes                    n=225
+  FC_G1                    -> fakes                    n=219
+  fakes                    -> FC_BOATOS                n=211
+  FC_G1                    -> FC_G1                    n=195
+  EXT_AVERITECBR           -> fakes                    n=175
+  EXT_LIARBR               -> fakes                    n=172

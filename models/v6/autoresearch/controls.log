@@ -1,0 +1,12 @@
+[05:15:46] === controle full_1ep {"steps": 156} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[07:56:55] steps=156 train_loss=0.6228 acc=0.7530 macroF1=0.6388 grpMean=0.5134 grpWorst=0.3361 ECE=0.0711 (9668s, 27 tok/s)
+[07:56:57] === controle informative_1ep {"steps": 63, "data_filter": "informative"} ===
+[E5] DFR cell: antes clip min=0.3265 max=42.23 prior_fake_efetivo=0.5000 | depois clip(25.0): min=0.3351 max=25.65 prior_fake_efetivo=0.4869
+[08:06:44] steps=63 train_loss=0.6922 acc=0.4140 macroF1=0.4140 grpMean=0.5563 grpWorst=0.3858 ECE=0.1381 (587s, 337 tok/s)
+[08:06:47] === controle informative_mask_1ep {"steps": 63, "data_filter": "informative", "mask_entities": true} ===
+[E5] DFR cell: antes clip min=0.3265 max=42.23 prior_fake_efetivo=0.5000 | depois clip(25.0): min=0.3351 max=25.65 prior_fake_efetivo=0.4869
+[08:17:09] steps=63 train_loss=0.6869 acc=0.6173 macroF1=0.5841 grpMean=0.6043 grpWorst=0.5011 ECE=0.0875 (622s, 320 tok/s)
+[08:17:11] === controle informative_ml256_1ep {"steps": 63, "data_filter": "informative", "max_length": 256} ===
+[E5] DFR cell: antes clip min=0.3265 max=42.23 prior_fake_efetivo=0.5000 | depois clip(25.0): min=0.3351 max=25.65 prior_fake_efetivo=0.4869
+[08:29:10] steps=63 train_loss=0.6891 acc=0.3497 macroF1=0.3372 grpMean=0.4857 grpWorst=0.3119 ECE=0.1966 (719s, 312 tok/s)

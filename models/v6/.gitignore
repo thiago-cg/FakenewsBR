@@ -1,0 +1,8 @@
+# Pesos e estados de otimizacao vao para o Release, nao para o git.
+*.safetensors
+*.pt
+*.bin
+*.onnx
+artifacts/*/last/
+review_tmp/
+__pycache__/

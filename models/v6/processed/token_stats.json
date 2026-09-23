@@ -1,0 +1,158 @@
+{
+  "tokenizer": "neuralmind/bert-base-portuguese-cased",
+  "add_special_tokens": true,
+  "truncation": false,
+  "distributions": {
+    "pool": {
+      "n": 91080,
+      "mean": 69.78,
+      "p50": 27.0,
+      "p90": 168.0,
+      "p95": 293.0,
+      "p99": 726.21,
+      "max": 8575,
+      "pct_gt_128": 12.03,
+      "pct_gt_192": 8.76,
+      "pct_gt_256": 6.1,
+      "pct_gt_512": 1.92,
+      "tokenize_seconds": 6.34
+    },
+    "informativos": {
+      "n": 36896,
+      "mean": 119.65,
+      "p50": 33.0,
+      "p90": 308.0,
+      "p95": 453.0,
+      "p99": 1046.05,
+      "max": 8575,
+      "pct_gt_128": 25.47,
+      "pct_gt_192": 18.82,
+      "pct_gt_256": 13.02,
+      "pct_gt_512": 4.06,
+      "tokenize_seconds": 3.78
+    }
+  },
+  "cost_by_split": {
+    "train_full_iid": {
+      "128": {
+        "cap": 128,
+        "batch_size": 32,
+        "mega": 50,
+        "tokens_pagos_por_epoca": 2747296,
+        "tokens_pagos_por_epoca_milhoes": 2.747,
+        "media_por_amostra": 43.09,
+        "n_batches": 1993,
+        "pct_batches_no_cap": 13.8
+      },
+      "192": {
+        "cap": 192,
+        "batch_size": 32,
+        "mega": 50,
+        "tokens_pagos_por_epoca": 3231392,
+        "tokens_pagos_por_epoca_milhoes": 3.231,
+        "media_por_amostra": 50.68,
+        "n_batches": 1993,
+        "pct_batches_no_cap": 10.34
+      },
+      "256": {
+        "cap": 256,
+        "batch_size": 32,
+        "mega": 50,
+        "tokens_pagos_por_epoca": 3592864,
+        "tokens_pagos_por_epoca_milhoes": 3.593,
+        "media_por_amostra": 56.35,
+        "n_batches": 1993,
+        "pct_batches_no_cap": 7.68
+      },
+      "razao_256_192": 1.1119
+    },
+    "train_ood_wa": {
+      "128": {
+        "cap": 128,
+        "batch_size": 32,
+        "mega": 50,
+        "tokens_pagos_por_epoca": 2880224,
+        "tokens_pagos_por_epoca_milhoes": 2.88,
+        "media_por_amostra": 40.01,
+        "n_batches": 2250,
+        "pct_batches_no_cap": 11.64
+      },
+      "192": {
+        "cap": 192,
+        "batch_size": 32,
+        "mega": 50,
+        "tokens_pagos_por_epoca": 3338400,
+        "tokens_pagos_por_epoca_milhoes": 3.338,
+        "media_por_amostra": 46.38,
+        "n_batches": 2250,
+        "pct_batches_no_cap": 8.4
+      },
+      "256": {
+        "cap": 256,
+        "batch_size": 32,
+        "mega": 50,
+        "tokens_pagos_por_epoca": 3665568,
+        "tokens_pagos_por_epoca_milhoes": 3.666,
+        "media_por_amostra": 50.92,
+        "n_batches": 2250,
+        "pct_batches_no_cap": 5.91
+      },
+      "razao_256_192": 1.098
+    },
+    "train_bal_iid": {
+      "128": {
+        "cap": 128,
+        "batch_size": 32,
+        "mega": 50,
+        "tokens_pagos_por_epoca": 1576064,
+        "tokens_pagos_por_epoca_milhoes": 1.576,
+        "media_por_amostra": 61.02,
+        "n_batches": 808,
+        "pct_batches_no_cap": 27.72
+      },
+      "192": {
+        "cap": 192,
+        "batch_size": 32,
+        "mega": 50,
+        "tokens_pagos_por_epoca": 1980256,
+        "tokens_pagos_por_epoca_milhoes": 1.98,
+        "media_por_amostra": 76.67,
+        "n_batches": 808,
+        "pct_batches_no_cap": 21.29
+      },
+      "256": {
+        "cap": 256,
+        "batch_size": 32,
+        "mega": 50,
+        "tokens_pagos_por_epoca": 2278208,
+        "tokens_pagos_por_epoca_milhoes": 2.278,
+        "media_por_amostra": 88.21,
+        "n_batches": 808,
+        "pct_batches_no_cap": 15.1
+      },
+      "razao_256_192": 1.1505
+    }
+  },
+  "cap_tokens_pagos_por_epoca": {
+    "train_full_iid": {
+      "128": 2747296,
+      "192": 3231392,
+      "256": 3592864
+    },
+    "train_ood_wa": {
+      "128": 2880224,
+      "192": 3338400,
+      "256": 3665568
+    },
+    "train_bal_iid": {
+      "128": 1576064,
+      "192": 1980256,
+      "256": 2278208
+    }
+  },
+  "assumptions": {
+    "batching": "length_grouped_batches(batch=32, mega=50, seed=42), comprimentos truncados no cap",
+    "tokens_pagos": "sum(len(batch) * max(len_no_batch))",
+    "cost_split": "trem de cada split (full_iid/ood_wa/bal_iid)"
+  }
+}

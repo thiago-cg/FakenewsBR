@@ -1,0 +1,39 @@
+treinando cabecas ERM e DFR sobre embeddings_ft (reproducao de score.py)...
+{
+ "FT": {
+  "n": 5920,
+  "fake_%": 71.6,
+  "acc": 0.8655,
+  "acc_ci95": [
+   0.8566,
+   0.874
+  ],
+  "macro_f1": 0.8214,
+  "roc_auc": 0.9162
+ },
+ "ERM": {
+  "n": 5920,
+  "fake_%": 71.6,
+  "acc": 0.8451,
+  "acc_ci95": [
+   0.8357,
+   0.8541
+  ],
+  "macro_f1": 0.8136,
+  "roc_auc": 0.9069
+ },
+ "DFR": {
+  "n": 5920,
+  "fake_%": 71.6,
+  "acc": 0.7345,
+  "acc_ci95": [
+   0.7231,
+   0.7456
+  ],
+  "macro_f1": 0.7172,
+  "roc_auc": 0.8608
+ }
+}
+calculando similaridade treino->teste...
+salvo em investigation\reverse_analysis\output/reverse_analysis.json e erros_confiantes.csv
+exit=0

@@ -1,0 +1,21 @@
+{
+  "platt_a": 0.8736483299382123,
+  "platt_b": -0.08246041421226843,
+  "max_length": 128,
+  "model": "neuralmind/bert-base-portuguese-cased",
+  "mask_entities": false,
+  "threshold": 0.5,
+  "threshold_val_opt": 0.5300000000000001,
+  "calib_on": "val_calib",
+  "calib_n": 128,
+  "calib_mask": "is_balanced_group",
+  "calib_prior_fake": 0.53125,
+  "freeze_layers": 6,
+  "seed": 42,
+  "split_col": "bal_ood_wa",
+  "dfr_weights": "off",
+  "weight_clip": 25.0,
+  "class_weights": false,
+  "script_sha256": "6c388d9d24cf94c4116016ac3a148dd4e23d0a02b43e1d20ef2bb6c805ef716f",
+  "created_utc": "2026-09-12T16:05:23Z"
+}

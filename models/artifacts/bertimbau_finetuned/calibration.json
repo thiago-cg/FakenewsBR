@@ -1,0 +1,7 @@
+{
+  "platt_a": 0.6998690412575005,
+  "platt_b": 0.03312834188266521,
+  "max_length": 192,
+  "model": "neuralmind/bert-base-portuguese-cased",
+  "mask_entities": false
+}

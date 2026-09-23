@@ -1,0 +1,295 @@
+{
+  "run_id": "bal_iid_ml192_f6_off_seed42_ablate-informative_smoke",
+  "created_utc": "2026-09-12T23:06:07Z",
+  "config": {
+    "args": {
+      "prepare": false,
+      "sanitized": "FakenewsBR_sanitized_v6.csv",
+      "labels": "FakenewsBR_v6_labels.csv",
+      "provenance": "FakenewsBR_v6_provenance.csv",
+      "out_dir": "models/v6/processed",
+      "data": "models/v6/processed/v6_pool.parquet",
+      "splits": "models/v6/processed/v6_splits.parquet",
+      "split_col": "bal_iid",
+      "eval_col": "bal_iid",
+      "eval_value": "test",
+      "out": "models/v6/artifacts/smoke_informative",
+      "drive_out": null,
+      "run_id": "bal_iid_ml192_f6_off_seed42_ablate-informative_smoke",
+      "model": "neuralmind/bert-base-portuguese-cased",
+      "max_length": 128,
+      "batch_size": 8,
+      "eval_batch_size": 32,
+      "grad_accum": 1,
+      "epochs": 1,
+      "patience": 1,
+      "min_delta": 0.005,
+      "best_metric": "worst_group",
+      "lr": 2e-05,
+      "warmup_frac": 0.1,
+      "weight_decay": 0.01,
+      "clip": 1.0,
+      "freeze_layers": 6,
+      "seed": 42,
+      "dfr_weights": "off",
+      "weight_clip": 25.0,
+      "class_weights": false,
+      "mask_entities": false,
+      "drop_tiers": "",
+      "amp": "off",
+      "device": "cpu",
+      "workers": 0,
+      "calib_col": "val_calib",
+      "threshold_primary": 0.5,
+      "save_every_epoch": "both",
+      "predict_all": false,
+      "token_stats": false,
+      "resume": false,
+      "force_resume": false,
+      "smoke": true,
+      "smoke_n": 128,
+      "ablate": "informative",
+      "probe_max_length": null,
+      "check_vendor": false
+    },
+    "ablate": "informative",
+    "loss_info": {},
+    "versions": {
+      "torch": "2.14.0+cpu",
+      "transformers": "5.17.0"
+    },
+    "script_sha256": "dfa29ba706e7a5daab8f83e6259cd1d192667e4933bc23df90a9e9f8c7126105"
+  },
+  "data": {
+    "data_sha256": "596b09116d8d54fe35cbdb07ec2ee4930982fbb18b0da29f4aebb799cef927cc",
+    "splits_sha256": "6df3d748aa1695d36fb60f856cc8b761c1e60b4d8eb9d551fa4002f8356b3638",
+    "split_col": "bal_iid",
+    "eval_col": "bal_iid",
+    "eval_value": "test",
+    "n_train": 128,
+    "n_val_sel": 128,
+    "n_val_calib": 128,
+    "n_test": 128,
+    "n_pool_bruto": 91080,
+    "n_test_bruto": 5535,
+    "n_ufffd_removidas": {
+      "train": 2,
+      "val_sel": 0,
+      "val_calib": 0,
+      "eval:bal_iid=test": 0
+    },
+    "train_fake_pct": 52.34,
+    "smoke": true
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.68412,
+      "val_loss": 0.68027,
+      "val_macro_f1": 0.52119,
+      "val_f1_fake": 0.67456,
+      "val_worst_group": null,
+      "val_ece": 0.06952,
+      "tokens_per_s": 255.7,
+      "samples_per_s": 4.22,
+      "lr_last": 0.0,
+      "scaler_scale": 0.0,
+      "vram_peak_gb": 0.0,
+      "seconds": 38.8,
+      "best_so_far": true
+    }
+  ],
+  "best_epoch": 1,
+  "calibration": {
+    "platt_a": 1.042361557752155,
+    "platt_b": -0.09103798296996095,
+    "calib_n": 128,
+    "calib_prior_fake": 0.5234375,
+    "train_prior_fake": 0.5234375,
+    "effective_prior_fake": 0.5234375,
+    "ece_before": 0.04500566799679496,
+    "ece_after": 0.018883283195299392,
+    "threshold": 0.5,
+    "threshold_val_opt": 0.5100000000000001
+  },
+  "test": {
+    "n": 128,
+    "acc": 0.5625,
+    "macro_f1": 0.5572028663207313,
+    "f1_fake": 0.6056338028169014,
+    "brier": 0.2416503205165437,
+    "ece": 0.07846899479500216,
+    "roc_auc": 0.626865671641791,
+    "pr_auc": 0.6172801785237769,
+    "worst_group_macro_f1": null,
+    "worst_group_balanced": null,
+    "acc_balanced": 0.5625,
+    "macro_f1_balanced": 0.5572028663207313,
+    "ece_balanced": 0.07846899479500216,
+    "pure_acc": 0.6,
+    "ptpt_macro_f1": 0.5619727449707982
+  },
+  "test_at_val_threshold": {
+    "n": 128,
+    "acc": 0.578125,
+    "macro_f1": 0.5755342667649226,
+    "f1_fake": 0.6086956521739131,
+    "brier": 0.2416503205165437,
+    "ece": 0.07846899479500216,
+    "roc_auc": 0.626865671641791,
+    "pr_auc": 0.6172801785237769,
+    "worst_group_macro_f1": null,
+    "worst_group_balanced": null,
+    "acc_balanced": 0.578125,
+    "macro_f1_balanced": 0.5755342667649226,
+    "ece_balanced": 0.07846899479500216,
+    "pure_acc": 0.5666666666666667,
+    "ptpt_macro_f1": 0.5846153846153846
+  },
+  "ood": null,
+  "cuts": {
+    "channel": [
+      {
+        "chave": "external_claim",
+        "n": 35,
+        "minoria_n": 16,
+        "fake_%": 45.7,
+        "acc": 0.5142857142857142,
+        "macro_f1": 0.47111111111111115,
+        "f1_fake": 0.32,
+        "roc_auc": 0.611842105263158,
+        "pr_auc": 0.6082864618020869,
+        "ece": 0.015294818705050874,
+        "confiavel": false
+      },
+      {
+        "chave": "agency_claim",
+        "n": 45,
+        "minoria_n": 14,
+        "fake_%": 68.9,
+        "acc": 0.6666666666666666,
+        "macro_f1": 0.5619727449707982,
+        "f1_fake": 0.7761194029850746,
+        "roc_auc": 0.6105990783410138,
+        "pr_auc": 0.7345961811015997,
+        "ece": 0.20114702940154694,
+        "confiavel": false
+      }
+    ],
+    "publisher": [
+      {
+        "chave": "desconhecido",
+        "n": 48,
+        "minoria_n": 20,
+        "fake_%": 41.7,
+        "acc": 0.5,
+        "macro_f1": 0.4991304347826087,
+        "f1_fake": 0.52,
+        "roc_auc": 0.5696428571428571,
+        "pr_auc": 0.4706131019339372,
+        "ece": 0.04634133096404732,
+        "confiavel": false
+      },
+      {
+        "chave": "poligrafo",
+        "n": 45,
+        "minoria_n": 14,
+        "fake_%": 68.9,
+        "acc": 0.6666666666666666,
+        "macro_f1": 0.5619727449707982,
+        "f1_fake": 0.7761194029850746,
+        "roc_auc": 0.6105990783410138,
+        "pr_auc": 0.7345961811015997,
+        "ece": 0.20114702940154694,
+        "confiavel": false
+      }
+    ],
+    "era": [
+      {
+        "chave": "sem_data",
+        "n": 56,
+        "minoria_n": 23,
+        "fake_%": 41.1,
+        "acc": 0.5178571428571429,
+        "macro_f1": 0.4903943377148635,
+        "f1_fake": 0.37209302325581395,
+        "roc_auc": 0.5573122529644268,
+        "pr_auc": 0.46269175300511045,
+        "ece": 0.023371790619372435,
+        "confiavel": false
+      },
+      {
+        "chave": "2018-2022",
+        "n": 45,
+        "minoria_n": 19,
+        "fake_%": 57.8,
+        "acc": 0.5555555555555556,
+        "macro_f1": 0.5,
+        "f1_fake": 0.6666666666666666,
+        "roc_auc": 0.6194331983805668,
+        "pr_auc": 0.6865034987176603,
+        "ece": 0.06446970696426073,
+        "confiavel": false
+      }
+    ],
+    "label_tier": [
+      {
+        "chave": "v1",
+        "n": 48,
+        "minoria_n": 20,
+        "fake_%": 41.7,
+        "acc": 0.5,
+        "macro_f1": 0.4991304347826087,
+        "f1_fake": 0.52,
+        "roc_auc": 0.5696428571428571,
+        "pr_auc": 0.4706131019339372,
+        "ece": 0.04634133096404732,
+        "confiavel": false
+      },
+      {
+        "chave": "checker",
+        "n": 80,
+        "minoria_n": 33,
+        "fake_%": 58.8,
+        "acc": 0.6,
+        "macro_f1": 0.5907928388746804,
+        "f1_fake": 0.6521739130434783,
+        "roc_auc": 0.6640876853642811,
+        "pr_auc": 0.7027903786961767,
+        "ece": 0.1166076498910703,
+        "confiavel": false
+      }
+    ],
+    "lang_variant_rule": {
+      "n_ptpt": 45,
+      "macro_f1_ptpt": 0.5619727449707982
+    },
+    "lang_variant_prov": [
+      {
+        "lang_variant": "desconhecido",
+        "n": 48,
+        "fake_pct": 0.4166666666666667
+      },
+      {
+        "lang_variant": "pt-BR",
+        "n": 80,
+        "fake_pct": 0.5875
+      }
+    ]
+  },
+  "constant_groups_diagnostic": [],
+  "timing": {
+    "tokenize_s": 0.07045500000822358,
+    "train_s": 30.311992700007977,
+    "eval_s": 26.776406399992993,
+    "total_s": 84.3014555000118
+  },
+  "hardware": {
+    "device": "cpu",
+    "gpu": null,
+    "capability": null,
+    "torch": "2.14.0+cpu",
+    "transformers": "5.17.0",
+    "cuda": null
+  }
+}

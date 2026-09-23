@@ -1,0 +1,301 @@
+rid,text,publisher,auto_label,confidence,method,evidence,evidence_title,sim,n_resultados
+754545354624318042,Em nome de Deus e da natureza,NEWS_OECO,unknown,-,abstencao,,,,79
+444055836036193186,Deputado diz que Bolsonaro quer votar flexibilização de armas em 2019,NEWS_PODER360,unknown,-,abstencao,,,,14
+338914208053745914,"&#8220;Se eu compro muitos testes, vão vencer&#8221;, diz Queiroga",NEWS_PODER360,unknown,-,abstencao,,,,0
+414319048704208477,"Depois do acordo com a Pfizer, Novartis vai ajudar a produzir vacina da CureVac",NEWS_ECO,unknown,-,abstencao,,,,5
+971284348445498954,"Itaipu 50 anos: saiba relação entre usina, expulsão dos Guarani na ditadura e atual conflito no PR",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,7
+521646130528712665,Governo Lula celebra 20 anos de políticas públicas de combate ao racismo e lança novas medidas,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,4
+142031181891271667,Corinthians lidera público e renda na 1ª fase do Paulistão 2026,NEWS_PODER360,unknown,-,abstencao,,,,52
+466032123844674286,"&#8220;Bolsonaro é testa de ferro de um projeto político de militares&#8221;, aponta antropólogo",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+922061967849986478,"Em depoimento, Rocha Loures disse que não questionava pedidos de Temer",NEWS_PODER360,unknown,-,abstencao,,,,8
+344409264215876448,"Dívida pública sobe 0,98% em agosto e chega a R$ 3,785 trilhões",NEWS_PODER360,unknown,-,abstencao,,,,2
+240936246282790605,"Desafeto de Olavo de Carvalho, Santos Cruz é o 3º ministro demitido por Bolsonaro",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,4
+886326517435009419,"Ecofeira em celebração aos 9 anos da Ocupação Mercado Sul Vive é destaque da agenda cultural deste fim de semana, confira",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2
+779591741757166315,"&#8220;Só vi coisa semelhante com o que aconteceu a Jango&#8221;, diz Maria Aparecida Aquino",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+985723949130647177,PAPO ESPORTIVO | 109 anos de história e superação,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,48
+128455077760909067,"MST cobra respostas do Incra e do MDA sobre infraestrutura, educação e políticas para mulheres em assentamentos",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,9
+761698360033996903,Bolsonaro diz que governo reduzirá o imposto sobre importação de bicicletas,NEWS_PODER360,unknown,-,abstencao,,,,15
+434289220086089456,"Novo coordenador do Enem, Murilo Resende foi expulso do MBL",NEWS_PODER360,unknown,-,abstencao,,,,7
+790232511243805999,"No Dia da Enfermagem, profissionais relatam rotinas exaustivas e baixos salários",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2
+94672148337037618,Fórum de diálogo com mulheres negras foi criado na Assembleia Legislativa do Rio,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,16
+110974487917989517,Nascidos em novembro e dezembro recebem nesta terça 2ª parcela do auxílio emergencial,NEWS_BRASILDEFATO,true,media,corroboracao,agenciabrasil.ebc.com.br;g1.globo.com;oglobo.globo.com,,,74
+661628007668675,ELN pede retomada de negociações de paz e Petro promete cessar-fogo bilateral na Colômbia,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+818442227966966562,"Mulher morre após desabamento de casas no bairro Maracanã, no Rio",NEWS_PODER360,true,media,corroboracao,cnnbrasil.com.br;estadao.com.br;g1.globo.com;gauchazh.clicrbs.com.br;metropoles.com;oglobo.globo.com;terra.com.br,,,41
+690329461400550622,Consultoria do Senado avalia que indicação de Eduardo é nepotismo,NEWS_PODER360,unknown,-,abstencao,,,,10
+721422770910134216,"Ato em defesa da democracia será realizado nesta quarta (8), em Brasília",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,76
+1006490864503041003,"Ausência das milícias na medida de Trump contra PCC e CV é vitória de Flávio Bolsonaro, afirma economista Paulo Kliass",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,1
+404670708500433271,Italiano de 16 anos é a 1ª vítima identificada em incêndio na Suíça,NEWS_PODER360,true,media,corroboracao,estadao.com.br;g1.globo.com;metropoles.com;oglobo.globo.com,,,39
+812246550401422728,"Amazônia tem 16 mil espécies de árvores, mas cerca de 200 predominam",NEWS_OECO,unknown,-,abstencao,,,,6
+246345831982106626,"Deficit em 2024 será de 0,1% do PIB sem gasto com RS, diz Haddad",NEWS_PODER360,unknown,-,abstencao,,,,27
+203618718550124486,"No Paraná, mulheres da favela exigem paz e direitos sociais garantidos",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,1
+745128599251319421,Brasil registra mais 2.641 mortes por covid e total vai a 441 mil vítimas,NEWS_PODER360,unknown,-,abstencao,,,,0
+662726321076558234,Desmatamento de florestas mais velhas põe Mata Atlântica em desequilíbrio,NEWS_OECO,unknown,-,abstencao,,,,10
+453536971038122200,Mais juízas a pedir menos trabalho para amamentarem revela &#8220;mudança de mentalidade&#8221;,NEWS_ECO,unknown,-,abstencao,,,,0
+235597752018898408,Prefeitura de SP diz que tem &#8220;maior Carnaval&#8221; e recebe críticas,NEWS_PODER360,unknown,-,abstencao,,,,0
+1135254072922562506,"Lula na Sapucaí foi propaganda antecipada para 45,4% dos brasileiros",NEWS_PODER360,unknown,-,abstencao,,,,14
+59067652659418146,Paraíba: João Azevêdo (PSB) é eleito governador da Paraíba,NEWS_PODER360,unknown,-,abstencao,,,,100
+582882850679457058,Cerca de 220 mil docentes e não docentes vão ser testados,NEWS_ECO,unknown,-,abstencao,,,,0
+97156533005057213,"Na região metropolitana do Rio, 44 entregadores foram baleados e 36 morreram nos últimos 8 anos",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+629237671042125216,"UE reconhece o trabalho de sensibilização dos documentários Waves of Tomorrow, promovidos pela Bluewave Alliance e pela Odicean",NEWS_ECO,unknown,-,abstencao,,,,0
+816809720311382233,"JB Capital avalia Novobanco entre 4,8 mil milhões e 6,2 mil milhões",NEWS_ECO,unknown,-,abstencao,,,,4
+135455642942277681,Assembleia Legislativa proíbe pulverização aérea de agrotóxicos no Ceará; entenda,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,5
+106166857899557173,Psol oficializa Boulos como candidato e promete revogar medidas de Temer,NEWS_PODER360,unknown,-,abstencao,,,,1
+2162869441690326,"Juíza do caso BES perguntou a Passos se será candidato a Belém. &#8220;Não&#8221;, respondeu",NEWS_ECO,unknown,-,abstencao,,,,0
+163153549438554263,Prêmio Comunique-se de 2020 é cancelado,NEWS_PODER360,unknown,-,abstencao,,,,6
+977235280614502658,Mato Grosso do Sul é o grande líder no desmatamento do Pantanal,NEWS_OECO,unknown,-,abstencao,,,,33
+118666567428813002,Barrados no baile das políticas climáticas e de biodiversidade,NEWS_OECO,unknown,-,abstencao,,,,5
+1130116564176799643,"Grande Rio tem 11 crianças baleadas nos primeiros meses de 2023, segundo Fogo Cruzado",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,29
+433196331899856415,Desmatou? Leva que o terreno é seu,NEWS_OECO,unknown,-,abstencao,,,,2
+1035801700892707535,Lira aumenta teto e deputados terão até R$ 135 mil de reembolso médico,NEWS_PODER360,unknown,-,abstencao,,,,3
+841817660507130169,Jornalista Marcio Guedes morre aos 75 anos,NEWS_PODER360,true,media,corroboracao,agenciabrasil.ebc.com.br;cnnbrasil.com.br;oglobo.globo.com;terra.com.br,,,25
+549881308920375920,"Lava Jato ignorou fraude relatada por Cunha em processo de cassação, diz jornal",NEWS_PODER360,unknown,-,abstencao,,,,3
+55436309748474682,“Ação Literária” da Expressão Popular começa nesta sexta (11) e vai até domingo em SP,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,3
+183502230648747273,"&#8216;Queda de refugiados mostra endurecimento de políticas de acolhimento&#8217;, diz especialista sobre dados da Acnur",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+567558234964063876,Carnaval fora de época será de sol com temperaturas amenas no Rio de Janeiro,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,51
+314839172099580670,"Apenas sete estados e o DF fazem tratamento de resíduos sólidos no Brasil, aponta relatório",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,4
+623278818585001899,"Interesse pela cerimônia do Oscar cai pelo 3º ano seguido, diz pesquisa",NEWS_PODER360,unknown,-,abstencao,,,,0
+184954797453635205,Rios Voadores: ex-servidor do Ibama é impedido de exercer cargo de chefia,NEWS_OECO,unknown,-,abstencao,,,,1
+300577972043929841,Rajoy revela lista de novos ministros do Governo espanhol,NEWS_ECO,unknown,-,abstencao,,,,1
+1063420957118733272,"Democracia ficou inabalada após atos de 8 de janeiro, diz Weber",NEWS_PODER360,unknown,-,abstencao,,,,10
+509371464514631561,Frei Sérgio morreu de tanto viver,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,10
+266251632481586483,CGD: Saiba quais os balcões que vão encerrar,NEWS_ECO,unknown,-,abstencao,,,,43
+630786093526801327,"7 em 10 brasileiros desconfiam do trabalho da polícia, diz PoderData",NEWS_PODER360,unknown,-,abstencao,,,,6
+1091044084535135226,Marcas que apostam em realidade virtual e aumentada vendem mais,NEWS_ECO,unknown,-,abstencao,,,,39
+137290057881693741,"Com chegada de Toledo, Peru tem 3 ex-presidentes presos na mesma penitenciária",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,7
+823073489774590078,"Com Bolsonaro, número de conflitos no campo é o maior dos últimos 10 anos",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,57
+168214249221952613,Google: novo Android 9 Pie tem maior presença de inteligência artificial,NEWS_PODER360,unknown,-,abstencao,,,,19
+831277556666547046,Fortalezenses vão às ruas para pedir mais empregos e defender a aposentadoria,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+22454146620166539,Trump se solidariza com Elizabeth 2ª após afastamento de Harry e Meghan Markle,NEWS_PODER360,unknown,-,abstencao,,,,0
+756077376496267586,Portugal regista mais 11.006 casos de Covid e 23 mortes,NEWS_ECO,unknown,-,abstencao,,,,1
+621892413721469935,"Anos que faltam para concluir a execução do Portugal 2020 não vão ser um &#8220;mar de rosas&#8221;, diz Nelson Souza",NEWS_ECO,unknown,-,abstencao,,,,0
+262987669666567464,Papa e líderes mundiais homenageiam Fidel Castro; Cuba terá luto oficial de nove dias,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2
+1078912127608130269,"Hoje nas notícias: PCP, falhas dos deputados e propinas",NEWS_ECO,unknown,-,abstencao,,,,1
+837712342300663918,"Intervenção no Rio não se propôs a &#8216;fazer mágica&#8217;, diz Raul Jungmann",NEWS_PODER360,unknown,-,abstencao,,,,0
+723657664109805518,A expansão humana e o encolhimento da biodiversidade,NEWS_OECO,unknown,-,abstencao,,,,0
+278713377046503442,Macron e Scholz defendem Europa mais forte em resposta a Trump,NEWS_PODER360,unknown,-,abstencao,,,,1
+1135181014792517528,Casa de apoio às mulheres vítimas de violência é inaugurada em BH,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,48
+671988121301717540,"Morre prefeito de Hortolândia, Ângelo Perugini, pioneiro na luta por reforma agrária",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+764631973367875146,Bitcoin já ganha 20%. É o melhor arranque de ano desde 2012,NEWS_ECO,unknown,-,abstencao,,,,0
+581159567496495793,"Galp ganha 1,6% e dá força à bolsa de Lisboa",NEWS_ECO,unknown,-,abstencao,,,,14
+473021924707830496,"Helicóptero achado em Paraibuna não tinha caixa-preta, diz polícia",NEWS_PODER360,true,media,corroboracao,estadao.com.br;g1.globo.com;oglobo.globo.com,,,10
+726141431241404765,Dilma diz que PIB do Brics já superou o do G7,NEWS_PODER360,unknown,-,abstencao,,,,6
+345070302827838373,"Atraso na demarcação de terras indígenas leva a degradação de biomas, mostra estudo",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,6
+1118527169922588188,"Exigência de visto é retrocesso, diz CEO do Bondinho",NEWS_PODER360,unknown,-,abstencao,,,,1
+806092301214615241,"Casos de síndrome respiratória estão em queda, diz InfoGripe",NEWS_PODER360,unknown,-,abstencao,,,,43
+1025865719040708054,Biden diz que aplicação do cessar-fogo em Gaza caberá a Trump,NEWS_PODER360,unknown,-,abstencao,,,,5
+1097339048956438673,Sem renda e impedidos de estudar: pandemia agrava situação de quilombolas em Minas,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,1
+1099994451474863285,Poder360 e Flipboard lançam parceria para publicação de notícias,NEWS_PODER360,unknown,-,abstencao,,,,0
+681908192071712999,"Claro diz vender telemedicina do Einstein, mas hospital nega acordo",NEWS_PODER360,unknown,-,abstencao,,,,0
+476941397726344498,Festa das Águas celebra Iemanjá e Oxum nesta quinta (2),NEWS_BRASILDEFATO,unknown,-,abstencao,,,,31
+755205958628757597,João Fonseca vence ATP 250 na Argentina e fatura US$ 100 mil,NEWS_PODER360,unknown,-,abstencao,,,,2
+618537593863520101,Lula volta ao Brasil e prioriza nova regra fiscal,NEWS_PODER360,unknown,-,abstencao,,,,26
+690261927926486674,STJ decide que gabinete de Janja será julgado em Brasília,NEWS_PODER360,unknown,-,abstencao,,,,3
+792360705191818338,Discurso de posse de nova ministra da Agricultura preocupa ambientalistas e indígenas,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+302571475268456290,"UE assina parcerias de segurança e defesa com Austrália, Gana e Islândia",NEWS_ECO,unknown,-,abstencao,,,,7
+1075785150956706923,"Tenho certeza que Bolsonaro participou de golpe, diz Lula",NEWS_PODER360,unknown,-,abstencao,,,,77
+1075898794378418125,Blogueiro Eduardo Guimarães denuncia “ditadura do judiciário”,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+703318586848509954,Abanca sai da Media Capital e quer ficar com 10% da Cofina,NEWS_ECO,unknown,-,abstencao,,,,2
+473339629269840006,Lula volta da Ásia e soma 9 dias fora do Brasil em 2026,NEWS_PODER360,unknown,-,abstencao,,,,7
+415485227589174760,"Celac não pode ser &#8220;clube de amigos ideológicos&#8221;, diz Lacalle Pou",NEWS_PODER360,unknown,-,abstencao,,,,0
+320313741869297076,FUP discute calendário de mobilizações e adesão da categoria à greve geral,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,1
+843180735899909115,Oposição pede renúncia de Temer e movimentos populares querem &#8220;Diretas Já&#8221;,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+99123043418402668,Ex-editor lança plataforma com lista de e-mail de antiga empresa,NEWS_PODER360,unknown,-,abstencao,,,,0
+460913526626468636,BC reduz dólar e quadruplica percentual de yuan em reservas,NEWS_PODER360,unknown,-,abstencao,,,,0
+207366659329621370,"Turismo e imigração ajudam Espanha a crescer 3,2% em 2024",NEWS_ECO,unknown,-,abstencao,,,,5
+451349669843278896,Movimentos e parlamentares buscam caminhos para evitar despejos em massa após as eleições,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,5
+883232482808476888,"Após ataques de Milei a Lula e Moraes, Itamaraty convoca embaixador argentino para reunião",NEWS_BRASILDEFATO,true,media,corroboracao,band.com.br;cnnbrasil.com.br;correiobraziliense.com.br;estadao.com.br;terra.com.br,,,32
+1063278084929056826,China volta a responder Trump com tarifas sobre produtos agrícolas e medidas contra 26 empresas dos EUA,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,65
+115340151560795940,Mostra de Cinema Antimanicomial inicia com denúncias e cobra fim de hospital psiquiátrico no DF,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+1143367365623927129,Risco iminente: estado do Rio tem aumento de 11% dos casos de dengue em relação a 2021,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2
+940543783514462693,Lucro recorde da Galp dá segundo maior dividendo. Estado vai encaixar 40 milhões,NEWS_ECO,unknown,-,abstencao,,,,10
+398481436687211567,FAB faz menos voos com autoridades em 2024; Barroso e Lira lideram,NEWS_PODER360,unknown,-,abstencao,,,,5
+811787685233640225,Associação alauita cita &#8220;corpos no mar&#8221; e &#8220;limpeza étnica&#8221; na Síria,NEWS_PODER360,unknown,-,abstencao,,,,0
+989340343699151349,Moro e Bretas assistem juntos à estreia de filme da Lava Jato,NEWS_PODER360,unknown,-,abstencao,,,,2
+124462051759821907,"Um terço da população aprova e um terço rejeita Bolsonaro, diz Datafolha",NEWS_PODER360,unknown,-,abstencao,,,,1
+623751544730401483,"Sem indústria e sem tecnologia, Pampa gaúcho também está perdendo a sua população",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,1
+380397949588662952,"Leilão da cessão onerosa não deve ser partidarizado, diz presidente do TCU",NEWS_PODER360,unknown,-,abstencao,,,,0
+180893346588317513,"Senado homenageará Janja, Rosa Weber e mais 5 mulheres",NEWS_PODER360,unknown,-,abstencao,,,,8
+494539701722374320,Ato vai reunir mães de vítimas da violência do Estado na Baixada Fluminense,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,3
+1117790677136205026,Líder da UGT acusa ministros de &#8220;desrespeito&#8221;. Apela a Marcelo,NEWS_ECO,unknown,-,abstencao,,,,0
+578686568323434474,Parlamento adia votação e já não vai regulamentar lóbi antes das eleições. PS acusa PSD de &#8220;incapacidade de resistir às pressões&#8221;,NEWS_ECO,unknown,-,abstencao,,,,0
+339055652104047532,Jerónimo de Sousa afirma que reguladores &#8220;têm um trabalho a cumprir e a concretizar&#8221; no caso de Isabel dos Santos,NEWS_ECO,unknown,-,abstencao,,,,0
+947940592050533544,Putin é reeleito para quarto mandato como presidente da Rússia,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,44
+704123127881196479,Centeno defende estabilidade europeia e sugere descida controlada das taxas de juro,NEWS_ECO,unknown,-,abstencao,,,,2
+447740371022651647,Vereador em Minas diz que tem que &#8220;matar cachorro de rua&#8221;; MP foi acionado,NEWS_PODER360,unknown,-,abstencao,,,,0
+192744053029069941,"Brasil atende a interesses do latifúndio e do capital internacional, diz pesquisadora",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2
+364917858146999524,"Em audiência no Senado, Marco Rubio enfrenta críticas por ação na Venezuela e admite possibilidade de novos ataques",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,3
+1119884207961605197,Livro reúne análises de 60 autores sobre as denúncias contra Dallagnol e Moro,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+1079157277261382368,É metaleiro? Tem um jogo de perguntas em português,NEWS_ECO,unknown,-,abstencao,,,,0
+573007469829691783,"Possível crise de crédito pioraria a economia, diz ex-BC",NEWS_PODER360,unknown,-,abstencao,,,,0
+654720534386541453,"Recorde: Governo federal expulsou 142 servidores no 1º trimestre, diz CGU",NEWS_PODER360,unknown,-,abstencao,,,,0
+831955201813433237,Como impeachment gerou desarranjo institucional e escancarou debilidade democrática,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+1089537854645161375,Brasil passa de 200 mil casos confirmados de covid-19 e chega perto das 14 mil mortes,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,53
+274519447389986816,PSD terá relatoria e MDB presidência de comissão do Orçamento de 2020,NEWS_PODER360,unknown,-,abstencao,,,,21
+1024538056083027964,Rosângela Moro sobre o marido e Bolsonaro: &#8216;Uma coisa só&#8217;,NEWS_PODER360,unknown,-,abstencao,,,,0
+1030345583164387399,Ana Matos é a nova diretora comercial sul da VCS-VERSPIEREN,NEWS_ECO,unknown,-,abstencao,,,,4
+161151832063005288,Venezuela denuncia ataque a embaixada na Noruega e já soma seis atentados a representações diplomáticas desde a posse de Maduro,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+272724171763672238,"Seguidores dos Bolsonaros atacam Alcolumbre, Maia, ministros e STF",NEWS_PODER360,unknown,-,abstencao,,,,0
+2960966436509247,"Há 30 anos, criação do Mercosul pôs fim às tensões entre Brasil e Argentina",NEWS_PODER360,unknown,-,abstencao,,,,26
+390413942926739144,Regras Covid obrigaram à demissão do comissário europeu. Caso foi agora arquivado pela justiça,NEWS_ECO,unknown,-,abstencao,,,,0
+419999369341903638,Estão abertas as inscrições para o Enem 2022; o prazo vai até o dia 21 de maio,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,51
+825068909752725271,"Tradição, cultura e muita fé! Mais de 250 mil pessoas marcaram presença na Festa do Pau da Bandeira de Santo Antônio",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2
+119147507200908500,Doria vai apresentar plano para saída gradual do isolamento em SP,NEWS_PODER360,unknown,-,abstencao,,,,7
+599363977848643005,"Futuro das notícias locais é “informação cívica”, diz relatório",NEWS_PODER360,unknown,-,abstencao,,,,0
+528829656738128367,"Após anos de mobilização social, prefeito de BH assina decreto que transforma Mata do Jardim América em espaço público",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,3
+528332368243140501,Um em cada quatro médicos tem mais de 65 anos e 5 mil vão aposentar-se até 2030,NEWS_ECO,unknown,-,abstencao,,,,13
+798311453961754025,"Embora minoritários, ativistas pediram fechamento do Congresso e do STF",NEWS_PODER360,unknown,-,abstencao,,,,1
+669206288971064734,Randolfe Rodrigues diz ter assinaturas suficientes para abrir a CPI do MEC no Senado,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,10
+495733747924192067,"Contas certas, pensões, salário, habitação. Há mais a unir do que a separar PS e AD",NEWS_ECO,unknown,-,abstencao,,,,2
+1071567987303424037,"Ministros do Supremo aprovam indicação de Zanin; Moro e Dallagnol, não: veja repercussão",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,4
+980685793303700038,Lisboa ainda não é Barcelona? Não está assim tão longe,NEWS_ECO,unknown,-,abstencao,,,,14
+769592313316250217,"Após incêndio e paralisação, Artesp determina que CPTM retome linhas privatizadas por Tarcísio em SP",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,9
+986625157197938689,CGD: Advogados de Domingues vão ser ouvidos na nova comissão,NEWS_ECO,unknown,-,abstencao,,,,0
+591903727765879707,Beto Richa (PSDB) e mais oito deputados paranaenses assinam urgência de projeto para anistiar golpistas,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,6
+788383019151539847,Lindbergh diz que líder da Oposição quer blindar Michelle Bolsonaro,NEWS_PODER360,unknown,-,abstencao,,,,1
+938579778527790824,Famurs reafirma que municípios têm autonomia para suspender aulas presenciais,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+328478992801670517,Segurança Social abre os cordões à bolsa e paga milhões em apoios esta semana,NEWS_ECO,unknown,-,abstencao,,,,1
+901481285270914976,"Morre dom Angélico, bispo que rezou missa antes de Lula se entregar à PF em 2018",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2
+412389169562548559,"&#8220;Lula não vai baixar a cabeça&#8221;, diz Janja em repúdio ao vandalismo",NEWS_PODER360,unknown,-,abstencao,,,,0
+11710459275892158,"Decisões, anúncios e milhões. Governo de prego a fundo a caminho da demissão",NEWS_ECO,unknown,-,abstencao,,,,0
+20606489345206573,Solidariedade e resistência cubana seguem fazendo história 62 anos após revolução,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2
+967020072357712686,"De acordo com cientista político, operação será encerrada com objetivos de Putin alcançados",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,1
+76953071145135037,Torrestir e Transuniverse assinam parceria na Bélgica,NEWS_ECO,unknown,-,abstencao,,,,2
+993727580701359094,"&#8216;Tortura institucional&#8217;, diz Glauber Braga sobre processo que pede sua cassação no Conselho de Ética",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+85208802603628574,Ex-bilionário de Hong Kong é o primeiro condenado por &#8216;conluio com forças estrangeiras&#8217;,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+195953567572289328,Chineses e americanos disputam banco da Fundação Oriente,NEWS_ECO,unknown,-,abstencao,,,,0
+303787302198380324,"Alvo do partido em 2016, Dilma tem homenagem discreta em congresso do PSB",NEWS_PODER360,unknown,-,abstencao,,,,0
+709339128751581076,Marco Vinholi é eleito presidente do PSDB de São Paulo,NEWS_PODER360,true,media,corroboracao,estadao.com.br;g1.globo.com;oglobo.globo.com,,,47
+782887616462575076,Armazém do Campo Recife celebra dois anos com live e campanha de solidariedade,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,3
+1067325188413226326,Entregar declaração ao TC? É uma remoção de uma liberdade pessoal,NEWS_ECO,unknown,-,abstencao,,,,0
+409534196272333626,Carlos diz que se reuniu com Marinho para falar da campanha de Flávio,NEWS_PODER360,unknown,-,abstencao,,,,38
+580600706823073497,Twitter de Eduardo Cunha mostra filha pedindo votos a Bolsonaro,NEWS_PODER360,unknown,-,abstencao,,,,8
+1012079377399338069,Fazendeiro é flagrado ateando fogo na Chapada dos Veadeiros,NEWS_OECO,unknown,-,abstencao,,,,2
+308395862629071606,Miranda cria equipa de trabalho focada na sustentabilidade e ESG,NEWS_ECO,unknown,-,abstencao,,,,2
+256716755482013834,Porto acolhe conferência que vai juntar startups e empreendedores de 2 a 4 de maio,NEWS_ECO,unknown,-,abstencao,,,,1
+698837467838304779,"Perto do mar do Sul da China, EUA e Filipinas fazem maior exercício militar em décadas",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,35
+263808342519450654,"Bolsa despenca 29,9% em março e tem pior trimestre da história",NEWS_PODER360,unknown,-,abstencao,,,,3
+279144807356005082,Guedes diz não saber se haverá esforço para reforma da Previdência em 2018,NEWS_PODER360,unknown,-,abstencao,,,,11
+98690679437401533,Brasil condena ataques dos EUA ao Irã e pede desescalada,NEWS_PODER360,unknown,-,abstencao,,,,39
+580479439244638132,Autoeuropa vai retomar segunda-feira produção a 100% com trabalhadores temporários,NEWS_ECO,unknown,-,abstencao,,,,4
+221417239390880922,China acusa EUA de travar uma &#8216;guerra ilegítima&#8217; contra o Irã em reunião entre chanceleres em Pequim,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+207432161024725898,"No Maranhão, Flávio Dino segue Nunes Marques e libera funcionamento das igrejas",NEWS_PODER360,unknown,-,abstencao,,,,0
+1107879438033516483,"O ego é a razão do fracasso? No Web Summit, é difícil não pensar em Trump",NEWS_ECO,unknown,-,abstencao,,,,0
+461812325250148738,China inaugura medalha para diplomatas com dois latino-americanos condecorados por contribuições à &#8216;amizade e cooperação&#8217;,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+722003205729507642,"Rui Costa é minha &#8220;Dilma de calças&#8221;, afirma Lula",NEWS_PODER360,unknown,-,abstencao,,,,0
+27043942371220760,"Governo tem tido atitude de defesa dos associados do Montepio, diz Vieira da Silva",NEWS_ECO,unknown,-,abstencao,,,,0
+294407131453745302,"IRS, TSU e ADSE &#8220;roubam&#8221; 15% do aumento prometido à Função Pública. Veja as simulações",NEWS_ECO,unknown,-,abstencao,,,,0
+599870905118139930,Índia aprova uso emergencial da vacina de Oxford e da Covaxin,NEWS_PODER360,unknown,-,abstencao,,,,11
+506174940890584188,"Antes ameaçado, Macêdo diz que Gleisi fará &#8220;bom trabalho&#8221; na SRI",NEWS_PODER360,unknown,-,abstencao,,,,0
+735893649925024202,"&#8216;Leite tem um projeto bem claro que é o da privatização&#8217;, afirma diretora de sindicato da educação no RS",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+975390992015870108,"Papa Francisco está “estável, com melhora gradual”, diz Vaticano",NEWS_PODER360,unknown,-,abstencao,,,,2
+1117003410077891960,"1° de Maio denuncia entrega do Brasil ao capital internacional, diz presidente da CUT",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,1
+1019244195933210714,"Vale tem 100% das ações da Aliança Energia após negócio de R$ 2,7 bi",NEWS_PODER360,unknown,-,abstencao,,,,31
+1008640137090684705,"RS tem 1,166 milhão de pessoas já infectadas pelo novo coronavírus",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+610666766215148026,AIG e Stone Point Capital formam MGA,NEWS_ECO,unknown,-,abstencao,,,,0
+289308693703485663,"Alerta de desmatamento na Amazônia bate recorde em maio, mostra Inpe",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,46
+966634883184619338,Falta de informação e obstrução do direito: entraves para acessar o aborto legal em Pernambuco,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,3
+653903358772181650,Apple: venda de iPhones caiu 15% no final de 2018,NEWS_PODER360,unknown,-,abstencao,,,,9
+870824246386739463,Gráfico de Meirelles comprova que PEC241 fará cortes de R$ 443 bi em educação e saúde,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+952817154859368839,"Brasil de Fato participa de mostra de cinema no Sesc São Bento, em SP, com série documental Território em Fluxo",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,1
+882101840773946523,"Com disputa acirrada entre esquerda e direita, ameaças marcam eleições na Colômbia",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2
+482319608746295103,Reguladores financeiros e fintechs estudam novas formas de colaborar a &#8220;breve trecho&#8221;,NEWS_ECO,unknown,-,abstencao,,,,0
+1091961845233112435,PT monta time para campanha de Haddad e quer vice de centro em SP,NEWS_PODER360,unknown,-,abstencao,,,,16
+393523426973433196,Saiba como foi o Golpe do Paraguai de 2012,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,49
+676815431454156027,Governo quer reformas e pacotão econômico aprovados no Congresso até julho,NEWS_PODER360,unknown,-,abstencao,,,,7
+66417641747810171,"&#8220;Logo não serei a única&#8221;, diz primeira indígena empossada Defensora Pública do Estado da Bahia",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+392866236655302618,Decisão sobre liberdade de Lula será tomada pelo presidente do TRF-4,NEWS_PODER360,unknown,-,abstencao,,,,48
+736551264202938263,"Presidente do Paraguai sabia sobre &#8216;acordo secreto&#8217; da Itaipu, diz jornal",NEWS_PODER360,unknown,-,abstencao,,,,0
+425892802572029269,Declaração de Roma já foi assinada pelos líderes europeus,NEWS_ECO,unknown,-,abstencao,,,,8
+1037652096318457374,Estados Unidos já não são uma democracia completa &#8211; e a culpa não é de Trump,NEWS_ECO,unknown,-,abstencao,,,,0
+765482037404456505,O dia em direto nos mercados e na economia – 4 de março,NEWS_ECO,unknown,-,abstencao,,,,78
+552417542641689970,Simples Nacional tem 853 mil pedidos de adesão em 2024,NEWS_PODER360,unknown,-,abstencao,,,,0
+537205894149030580,Mais de dois milhões de pessoas em Espanha têm pedras nos rins,NEWS_ECO,unknown,-,abstencao,,,,3
+340441964545594058,Suécia vai enviar militares para a Gronelândia a pedido da Dinamarca,NEWS_ECO,true,media,corroboracao,bbc.com;cnnbrasil.com.br;dw.com;estadao.com.br;g1.globo.com;metropoles.com;poder360.com.br,,,54
+179870138103829939,"Fecho da operação de manutenção e engenharia da TAP no Brasil &#8220;não é decisão fácil&#8221;, diz CEO",NEWS_ECO,unknown,-,abstencao,,,,0
+980222439476863801,Jovem morre atropelada por caminhão no Carnaval de Salvador,NEWS_PODER360,true,media,corroboracao,cnnbrasil.com.br;estadao.com.br;g1.globo.com;metropoles.com;terra.com.br,,,74
+658704975977911290,Cepa indiana do coronavírus é mais transmissível e foi confirmada em Minas Gerais,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,10
+763216944552961210,Solidariedade é o foco da Páscoa em Curitiba,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,5
+334155148113772690,Restauração nos Lençóis Maranhenses e como resolver dois problemas com um plantio só,NEWS_OECO,unknown,-,abstencao,,,,2
+569241374136857421,"Não tema o crescimento, ele não é mais o inimigo do planeta",NEWS_OECO,unknown,-,abstencao,,,,3
+928557082117415471,"Inflação ficou fora da meta por dólar e economia aquecida, diz BC",NEWS_PODER360,unknown,-,abstencao,,,,67
+533547043284383969,TJ anula júri que condenou ex-PM e guarda civil por chacina em Osasco em 2015,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,10
+1053789088783687244,Portugal tem apenas 14% de mulheres em lugares de gestão de topo. Há &#8220;espaço para melhorar a vários níveis&#8221;,NEWS_ECO,unknown,-,abstencao,,,,0
+749717230952547950,"Descida do IVA na luz beneficiaria famílias mais ricas, diz Centeno",NEWS_ECO,unknown,-,abstencao,,,,0
+971277443993672066,"Apoiado por ex-presidente Uribe, direitista Duque é eleito presidente da Colômbia",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,27
+30840670838504648,Doria vence prévias do PSDB e deve ser o candidato ao governo de SP,NEWS_PODER360,unknown,-,abstencao,,,,38
+388359753460870201,Autoridades repercutem atos contra e a favor do governo neste domingo em SP,NEWS_PODER360,unknown,-,abstencao,,,,6
+935639080227730705,Manter controlo da refinaria de Sines? Governo &#8220;vai ver as ferramentas que existem&#8221;,NEWS_ECO,unknown,-,abstencao,,,,0
+1046001029549207768,Eleição da Câmara tem horários definidos; sessão começará 19h,NEWS_PODER360,unknown,-,abstencao,,,,13
+1012643261040928342,"Indicação do vice não cabe a ninguém, só a Nunes, diz Tarcísio",NEWS_PODER360,unknown,-,abstencao,,,,4
+890005919752700724,Bolsonaro é derrotado no TSE em ação contra Alexandre de Moraes,NEWS_PODER360,unknown,-,abstencao,,,,66
+1095940489532817098,Futebol nas mãos da Globo: propina não é único problema,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,8
+702912929185262627,Bolsonaro ignora Ucrânia e inaugura travessia em SP; Itamaraty mostra &#8220;preocupação&#8221; com crise,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+892191673609449618,"IL e CDS em desacordo na privatização da TAP, CGD e RTP",NEWS_ECO,unknown,-,abstencao,,,,1
+55276559255373156,Insolvências de empresas aumentam 35% e constituições caem 23% em janeiro,NEWS_ECO,unknown,-,abstencao,,,,0
+1061314133069148516,"Antiga Triumph e Ricon são &#8220;infeliz coincidência&#8221; quando o têxtil bate recordes, diz a ATP",NEWS_ECO,unknown,-,abstencao,,,,0
+1093410704179707464,Bolsonaro fala sobre visita à Rússia: &#8220;Putin é conservador”,NEWS_PODER360,unknown,-,abstencao,,,,0
+594476044459010146,Marta Suplicy não aceita ser vice de Meirelles e anuncia desfiliação do MDB,NEWS_PODER360,unknown,-,abstencao,,,,6
+984301136582833899,USP: alunos mantêm ocupação de reitoria e pedem reabertura de diálogo,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,6
+637804205361191535,Brasília: PM e Exército concluem desmobilização de acampamento bolsonarista no QG,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,5
+150068438035822549,Calamidade pública não dispensa teto de gastos e regra de ouro,NEWS_PODER360,unknown,-,abstencao,,,,8
+723559840982839572,PF pode pedir afastamento de ministro? Especialista explica lacuna legal e próximos passos no caso Toffoli,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,1
+1086510280686052316,MG: confira como foram os atos 19J contra Bolsonaro no estado,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2
+619667684518905281,Biblioteca Franco Giglio será recuperada e reaberta à comunidade,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,1
+482995579991679042,NAU e Incode.2030 lançam curso gratuito para criadores de conteúdos digitais,NEWS_ECO,unknown,-,abstencao,,,,0
+515165978353274097,"Sanções ferem &#8220;máquina de guerra&#8221; da Rússia, diz Otan",NEWS_PODER360,unknown,-,abstencao,,,,0
+442978240918753270,"Bete Carvalho, Maria Gadú e Ana Canãs confirmam presença no 1° de Maio de Curitiba",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2
+871335896729508589,Banco dos Brics recebe jornalistas e dá presentes,NEWS_PODER360,unknown,-,abstencao,,,,2
+1098480266389473198,Fabrício Queiroz seguia &#8216;complexa rotina de ocultação&#8217; e pensava em fugir,NEWS_PODER360,unknown,-,abstencao,,,,0
+234762664536138337,Armazém do Campo DF é assaltado pela terceira vez em 2025 e prejuízo chega a R$ 4 mil,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+371946335861564581,"Após 10 anos, ninguém foi condenado por acidente que causou cratera no Metrô em SP",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,8
+333472513077845318,Jornal Brasil de Fato RJ completa 10 anos produzindo notícias em formato online e impresso,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,5
+779483735666051654,Efeito Neymar: Santos supera São Paulo e Palmeiras no Instagram,NEWS_PODER360,unknown,-,abstencao,,,,13
+902840428687612812,Nova sondagem dá Ventura à frente seguido de Mendes e Cotrim,NEWS_ECO,unknown,-,abstencao,,,,28
+1055629009532428169,"“Nosso Natal será cinza, em meio às cinzas”, diz morador de ocupação no Paraná",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+473285062642792685,"Teich diz que saída foi escolha própria, mas não explica motivos",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2
+954514796741262054,Dilma diz que 2018 será oportunidade para país retomar a democracia,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,3
+1134159671782133405,Pesca Esportiva: até onde vai o turismo ecológico e começa o impacto ambiental,NEWS_OECO,unknown,-,abstencao,,,,31
+327886684297157390,"PSD é independente, diz Kassab depois de projetar Bolsonaro fora do 2º turno",NEWS_PODER360,unknown,-,abstencao,,,,23
+271282563680775045,Certificado Covid vai deixar de ser obrigatório para entrar em bares e restaurantes na Catalunha,NEWS_ECO,unknown,-,abstencao,,,,3
+758168076429200870,General é novo conselheiro de Segurança Nacional de Trump,NEWS_PODER360,unknown,-,abstencao,,,,66
+432620815215529515,Mergulhador diz que mini-submarino de Elon Musk foi só jogada de marketing,NEWS_PODER360,unknown,-,abstencao,,,,0
+385379379432815562,"Mais de 1,1 mil cidades estão em alerta para chuvas; litoral de SP e RJ estão sob maior risco",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,77
+498382966254029984,Programa Brasil de Fato PE: dirigente do MST denuncia despejo de terreno em Caruaru,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+384030420727734831,"FMI, guerra na Ucrânia, fome e exclusão regional: a dura mensagem de Fernández a Joe Biden",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2
+1101472783375316111,CCJ aprova multa de R$ 10 mil a quem promover e participar de aglomeração na pandemia,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,1
+922455215088286190,Canadá anuncia que TikTok será excluído de aparelhos do governo,NEWS_PODER360,unknown,-,abstencao,,,,5
+383399978101715565,"Prefeitura não renova contratos, e 200 mil paulistanos podem ficar sem médicos",NEWS_BRASILDEFATO,unknown,-,abstencao,,,,1
+75354081150276178,Lula classifica discussão entre Trump e Zelensky como &#8220;grotesca&#8221;,NEWS_PODER360,unknown,-,abstencao,,,,0
+883416415235396740,Moraes nega recurso e mantém prisão de Anderson Torres,NEWS_PODER360,unknown,-,abstencao,,,,25
+422228640979060089,Arranca período de vacinação exclusiva para crianças e comunidade escolar,NEWS_ECO,unknown,-,abstencao,,,,7
+150550854873373843,Avon investe dois milhões de dólares em replantio de árvores na Mata Atlântica,NEWS_OECO,unknown,-,abstencao,,,,0
+947439244606419754,Alckmin rebate delação da Ecovias e diz lamentar &#8220;versões irresponsáveis em ano eleitoral&#8221;,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+931173541766790762,Bruxelas: reformas orçamentais estruturais têm sido lentas,NEWS_ECO,unknown,-,abstencao,,,,0
+31541715576971747,"Operação Marquês:&#8221;Esta é a história deste processo que não tem nada de oculto&#8221;, diz Ministério Público",NEWS_ECO,unknown,-,abstencao,,,,0
+808060179214716539,Reforma trabalhista do agronegócio pode provocar violência e caos no campo,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2
+619684083255534506,Risco Brasil tem maior alta anual desde 2015 e fecha aos 205 pontos,NEWS_PODER360,unknown,-,abstencao,,,,1
+953108721446926723,"&#8216;Presidente do país deve moderar, não atiçar&#8217;, diz FHC",NEWS_PODER360,unknown,-,abstencao,,,,0
+1119759203841066612,Fernando Baiano diz ter feito repasses de R$ 4 milhões para Cunha,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,15
+366169758387123591,Marcelo diz que &#8220;não há condições&#8221; para adiar eleições de 24 de janeiro,NEWS_ECO,unknown,-,abstencao,,,,0
+77294297762709218,MPF denuncia 6 pessoas por desvio em contratos do DER-RJ,NEWS_PODER360,unknown,-,abstencao,,,,1
+217626844586595396,DGS considera Marcelo contacto de baixo risco e exclui isolamento,NEWS_ECO,unknown,-,abstencao,,,,0
+1116519045985053232,Saiba quais bairros estão sem água em SP e Santo André pós-chuvas,NEWS_PODER360,unknown,-,abstencao,,,,38
+219681514163752424,"Hoje nas notícias: Sondagens, Soares da Costa e portagens",NEWS_ECO,unknown,-,abstencao,,,,0
+148690356174789736,"Às vésperas da votação da denúncia, Temer diz que desafios &#8216;motivam governo&#8217;",NEWS_PODER360,unknown,-,abstencao,,,,0
+696594542210064621,"PSD, PCP, BE e CDS querem revogação total ou parcial das novas regras das PPP",NEWS_ECO,unknown,-,abstencao,,,,0
+216436039684551048,"Nenhuma rede terá regulação maior que leis brasileiras, diz Dino",NEWS_PODER360,unknown,-,abstencao,,,,7
+669483238536255830,"No Carnaval, presidente Lula passará por Recife, Salvador e Rio de Janeiro",NEWS_BRASILDEFATO,true,media,corroboracao,cnnbrasil.com.br;correiobraziliense.com.br;g1.globo.com;metropoles.com;poder360.com.br,,,58
+29781912956346567,Estudantes contra os cortes na educação e em defesa da Amazônia em Porto Alegre,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,23
+65884904710104965,Governo enviará projetos para ajudar caixa de Estados e municípios em 20 dias,NEWS_PODER360,unknown,-,abstencao,,,,1
+134732747361348224,"Político do DEM é nomeado chefe do Parque Nacional de Caparaó, unidade que abriga o Pico da Bandeira",NEWS_OECO,unknown,-,abstencao,,,,3
+1144701384706441297,"ChatGPT trará mais interação com cliente, diz presidente da Vivo",NEWS_PODER360,unknown,-,abstencao,,,,1
+111086177797348718,UE e Cuba assinam primeiro acordo bilateral,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,3
+86222295221904077,Em Moscou qualquer um pode tomar vacina &#8211; e ganha um sorvete,NEWS_PODER360,unknown,-,abstencao,,,,0
+1135808145008706962,Conheça a história da fotografia feita por Sebastião Salgado no Paraná e que ganhou o mundo,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,14
+162493238164968117,Cascais foi a autarquia que mais gastou com a pandemia. Veja o ranking,NEWS_ECO,unknown,-,abstencao,,,,0
+142911281622673732,Fidelidade assina acordo para compra 51% da peruana La Positiva e chega à América latina,NEWS_ECO,unknown,-,abstencao,,,,0
+197260967103862050,Primeira delatora da Lava Jato diz que havia prêmio para quem entregasse Lula,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+205792751942721859,RS mantém ritmo preocupante e avança em direção aos 10 mil óbitos pela covid-19,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,0
+995147175874002775,"Tenho fé que Bolsonaro será candidato em 2026, diz Valdemar Costa Neto",NEWS_PODER360,unknown,-,abstencao,,,,49
+170806806207616452,"Mercado automóvel em Portugal aumentou 5,6% em 2024",NEWS_ECO,unknown,-,abstencao,,,,79
+436555701649944740,Lula se reúne com Douglas Belchior e Benedita da Silva e discute agenda política para o país,NEWS_BRASILDEFATO,unknown,-,abstencao,,,,2

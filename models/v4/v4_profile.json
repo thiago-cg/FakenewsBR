@@ -1,0 +1,1924 @@
+{
+  "generated_at": "2026-09-12T15:19:33.318109+00:00",
+  "script": "C:\\Users\\tito\\OneDrive\\Documentos\\Projetos\\FakenewsBR\\models\\v4\\explore_v4.py",
+  "inputs": {
+    "sanitized": {
+      "path": "C:\\Users\\tito\\OneDrive\\Documentos\\Projetos\\FakenewsBR\\FakenewsBR_sanitized_v4.csv",
+      "size_mb": 210.6,
+      "physical_lines": 526277,
+      "parsed_rows": 291521,
+      "t_read_s": 64.2
+    },
+    "labels": {
+      "path": "C:\\Users\\tito\\OneDrive\\Documentos\\Projetos\\FakenewsBR\\FakenewsBR_v4_labels.csv",
+      "size_mb": 56.0,
+      "physical_lines": 409596,
+      "parsed_rows": 291521,
+      "columns": [
+        "rid",
+        "text",
+        "label",
+        "label_source",
+        "label_tier",
+        "auto_label",
+        "confidence",
+        "method",
+        "evidence",
+        "train_label"
+      ],
+      "t_read_s": 3.2
+    },
+    "provenance": {
+      "path": "C:\\Users\\tito\\OneDrive\\Documentos\\Projetos\\FakenewsBR\\FakenewsBR_v4_provenance.csv",
+      "size_mb": 49.0,
+      "physical_lines": 252056,
+      "parsed_rows": 252055,
+      "columns": [
+        "rid",
+        "label_source",
+        "text_role",
+        "publisher",
+        "lang_variant",
+        "collector",
+        "source_url",
+        "collected_at",
+        "rating_norm",
+        "mentions_ai"
+      ],
+      "t_read_s": 2.1
+    }
+  },
+  "sanitized": {
+    "shape": [
+      291521,
+      23
+    ],
+    "columns": [
+      "rid",
+      "dataset_name",
+      "source_type",
+      "source_description",
+      "label",
+      "date_iso",
+      "url_review",
+      "text",
+      "text_clean",
+      "text_no_url",
+      "extracted_urls",
+      "is_duplicated",
+      "is_null",
+      "too_short",
+      "factcheck_rating",
+      "factcheck_claimant",
+      "factcheck_url",
+      "char_len",
+      "word_len",
+      "num_exclamations",
+      "num_questions",
+      "num_ellipsis",
+      "uppercase_word_ratio"
+    ],
+    "dtypes": {
+      "rid": "int64",
+      "dataset_name": "str",
+      "source_type": "str",
+      "source_description": "str",
+      "label": "str",
+      "date_iso": "str",
+      "url_review": "str",
+      "text": "str",
+      "text_clean": "str",
+      "text_no_url": "str",
+      "extracted_urls": "str",
+      "is_duplicated": "int64",
+      "is_null": "int64",
+      "too_short": "int64",
+      "factcheck_rating": "str",
+      "factcheck_claimant": "str",
+      "factcheck_url": "str",
+      "char_len": "int64",
+      "word_len": "int64",
+      "num_exclamations": "int64",
+      "num_questions": "int64",
+      "num_ellipsis": "int64",
+      "uppercase_word_ratio": "float64"
+    },
+    "rid_unique": true,
+    "rid_null": 0,
+    "label_column_counts": {
+      "fake": 60991,
+      "true": 39009,
+      "True": 191521
+    },
+    "dataset_name_counts": {
+      "NEWS_PODER360": 77273,
+      "NEWS_BRASILDEFATO": 76219,
+      "NEWS_ECO": 41362,
+      "fakes": 20347,
+      "NEWS_OECO": 14602,
+      "FC_POLIGRAFO": 10831,
+      "FC_BOATOS": 10774,
+      "Fake.br": 7160,
+      "EXT_LIARBR": 6996,
+      "FakeWhatsApp.BR_2018": 6381,
+      "FC_EFARSAS": 3208,
+      "FC_G1": 3187,
+      "EXT_AVERITECBR": 2925,
+      "true": 2710,
+      "FC_BOATOS_VIRAL": 2360,
+      "COVID19.BR": 1931,
+      "FC_LUPA": 1437,
+      "COVID19.BR_raw": 373,
+      "LLM4BR_300": 299,
+      "FC_COMPROVA": 249,
+      "MuMiN-PT": 222,
+      "FC_FOLHA": 211,
+      "FC_SBT": 210,
+      "FC_BEREIA": 202,
+      "Fake.br_raw": 39,
+      "FC_NEXO": 9,
+      "MuMiN-PT_raw": 4
+    },
+    "null_counts": {
+      "rid": 0,
+      "dataset_name": 0,
+      "source_type": 0,
+      "source_description": 0,
+      "label": 0,
+      "date_iso": 20171,
+      "url_review": 23284,
+      "text": 0,
+      "text_clean": 0,
+      "text_no_url": 0,
+      "extracted_urls": 0,
+      "is_duplicated": 0,
+      "is_null": 0,
+      "too_short": 0,
+      "factcheck_rating": 241086,
+      "factcheck_claimant": 271097,
+      "factcheck_url": 38626,
+      "char_len": 0,
+      "word_len": 0,
+      "num_exclamations": 0,
+      "num_questions": 0,
+      "num_ellipsis": 0,
+      "uppercase_word_ratio": 0
+    },
+    "flags": {
+      "source_type": {
+        "news": 70315,
+        "tweets with only true info": 2710,
+        "whatsapp messages": 6381,
+        "brazilian news about politics": 299,
+        "social media post": 2360,
+        "news headline": 209456
+      },
+      "is_duplicated": {
+        "0": 291521
+      },
+      "is_null": {
+        "0": 291521
+      },
+      "too_short": {
+        "0": 291521
+      }
+    },
+    "text_diagnostics": {
+      "text": {
+        "notnull": 291521,
+        "empty": 0,
+        "has_fffd": 4,
+        "has_latin_ext_ab": 50
+      },
+      "text_clean": {
+        "notnull": 291521,
+        "empty": 0,
+        "has_fffd": 4,
+        "has_latin_ext_ab": 6
+      },
+      "text_no_url": {
+        "notnull": 291521,
+        "empty": 0,
+        "has_fffd": 4,
+        "has_latin_ext_ab": 50
+      }
+    },
+    "date_full": {
+      "min": "1920-06-30 00:00:00",
+      "max": "2026-09-11 00:00:00",
+      "nan": 20171,
+      "year_counts": {
+        "-1": 20171,
+        "1920": 1,
+        "1921": 1,
+        "1922": 4,
+        "2004": 70,
+        "2005": 161,
+        "2006": 191,
+        "2007": 177,
+        "2008": 405,
+        "2009": 452,
+        "2010": 467,
+        "2011": 682,
+        "2012": 1085,
+        "2013": 1103,
+        "2014": 1431,
+        "2015": 1222,
+        "2016": 8643,
+        "2017": 16224,
+        "2018": 28633,
+        "2019": 26734,
+        "2020": 30117,
+        "2021": 28030,
+        "2022": 27771,
+        "2023": 24991,
+        "2024": 24908,
+        "2025": 24640,
+        "2026": 23207
+      }
+    },
+    "timing_read_s": 64.2
+  },
+  "labels": {
+    "shape": [
+      291521,
+      7
+    ],
+    "columns": [
+      "rid",
+      "text",
+      "label",
+      "label_source",
+      "label_tier",
+      "auto_label",
+      "confidence",
+      "method",
+      "evidence",
+      "train_label"
+    ],
+    "rid_unique": true,
+    "train_label_counts": {
+      "<NaN>": 206309,
+      "fake": 60991,
+      "true": 24221
+    },
+    "label_tier_counts": {
+      "provenance": 206309,
+      "v1": 39466,
+      "checker": 38526,
+      "checker_match": 4119,
+      "llm_local": 3092,
+      "corroborated": 9
+    },
+    "label_source_counts": {
+      "provenance": 209456,
+      "rating": 42599,
+      "<NaN>": 39466
+    },
+    "confidence_counts": {
+      "<NaN>": 284310,
+      "1.0": 6930,
+      "0.85": 140,
+      "0.95": 89,
+      "0.9": 24,
+      "0.909": 9,
+      "0.923": 7,
+      "0.929": 3,
+      "0.933": 2,
+      "0.947": 1,
+      "0.976": 1,
+      "0.952": 1,
+      "0.917": 1,
+      "0.905": 1,
+      "0.926": 1
+    },
+    "method_counts": {
+      "<NaN>": 284301,
+      "llm_local": 3092,
+      "claimreview:boatos.org": 1845,
+      "claimreview:lupa": 1575,
+      "claimreview:comprova": 251,
+      "claimreview:sbt": 219,
+      "claimreview:folha": 216,
+      "corroboracao": 9,
+      "claimreview:nexo": 8,
+      "claimreview:poligrafo": 4,
+      "claimreview:g1": 1
+    },
+    "auto_label_counts": {
+      "<NaN>": 284301,
+      "fake": 4038,
+      "true": 3182
+    }
+  },
+  "provenance": {
+    "shape": [
+      252055,
+      10
+    ],
+    "columns": [
+      "rid",
+      "label_source",
+      "text_role",
+      "publisher",
+      "lang_variant",
+      "collector",
+      "source_url",
+      "collected_at",
+      "rating_norm",
+      "mentions_ai"
+    ],
+    "rid_unique": true,
+    "lang_variant_counts": {
+      "pt-BR": 210689,
+      "pt-PT": 41366
+    },
+    "publisher_counts": {
+      "poder360": 77273,
+      "brasildefato": 76219,
+      "eco": 41362,
+      "oeco": 14602,
+      "boatos": 11499,
+      "poligrafo": 10831,
+      "ext_liarbr": 6996,
+      "efarsas": 3208,
+      "g1": 3187,
+      "ext_averitecbr": 2925,
+      "boatos.org": 1635,
+      "lupa": 1437,
+      "comprova": 249,
+      "folha": 211,
+      "sbt": 210,
+      "bereia": 202,
+      "nexo": 9
+    }
+  },
+  "merge": {
+    "sanitized_rows": 291521,
+    "sanitized_unique_rids": 291521,
+    "sanitized_duplicate_rids": 0,
+    "labels_rows": 291521,
+    "labels_rids_not_in_sanitized": 0,
+    "sanitized_rids_without_label_row": 0,
+    "provenance_rids_not_in_sanitized": 0,
+    "sanitized_rids_without_provenance": 39466,
+    "train_label_counts": {
+      "<NaN>": 206309,
+      "fake": 60991,
+      "true": 24221
+    },
+    "label_tier_counts": {
+      "provenance": 206309,
+      "v1": 39466,
+      "checker": 38526,
+      "checker_match": 4119,
+      "llm_local": 3092,
+      "corroborated": 9
+    },
+    "label_source_counts": {
+      "provenance": 209456,
+      "rating": 42599,
+      "<NaN>": 39466
+    },
+    "category_counts_after_merge": {
+      "fake": 60991,
+      "true": 24221,
+      "<train_label_NaN>": 206309
+    },
+    "tier_x_category": {
+      "v1|fake": 28236,
+      "v1|true": 11230,
+      "checker|fake": 28717,
+      "checker|true": 9809,
+      "checker_match|fake": 4038,
+      "checker_match|true": 81,
+      "provenance|<train_label_NaN>": 206309,
+      "llm_local|true": 3092,
+      "corroborated|true": 9
+    },
+    "orig_label_x_category": {
+      "fake|fake": 60991,
+      "true|true": 22330,
+      "true|<train_label_NaN>": 16679,
+      "True|<train_label_NaN>": 189630,
+      "True|true": 1891
+    },
+    "train_label_capitalized_True": 0,
+    "orig_label_casefold_mismatch_in_pool": 0,
+    "text_labeled_rows": 85212,
+    "text_labeled_rows_dropped_by_text_filter": 0,
+    "news_total": 209456,
+    "news_without_train_label": 206309,
+    "news_in_pool": {
+      "n": 3147,
+      "by_group": {
+        "NEWS_PODER360": 1334,
+        "NEWS_BRASILDEFATO": 900,
+        "NEWS_OECO": 468,
+        "NEWS_ECO": 445
+      },
+      "by_tier": {
+        "llm_local": 3092,
+        "checker_match": 46,
+        "corroborated": 9
+      },
+      "by_label": {
+        "true": 3147
+      }
+    },
+    "fc_total": 32678,
+    "fc_without_train_label": 0,
+    "ext_total": 9921,
+    "ext_without_train_label": 0,
+    "full_normalized_unique_texts": 291521,
+    "full_normalized_duplicated_rows_extra": 0
+  },
+  "pool": {
+    "n": 85212,
+    "n_fake": 60991,
+    "n_true": 24221,
+    "fake_true_ratio": 2.518,
+    "pct_fake": 71.58,
+    "by_dataset_top30": [
+      {
+        "group": "fakes",
+        "channel": "agency_claim",
+        "n": 20347,
+        "n_fake": 20347,
+        "n_true": 0,
+        "pct_fake": 100.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "FC_POLIGRAFO",
+        "channel": "agency_claim",
+        "n": 10831,
+        "n_fake": 6997,
+        "n_true": 3834,
+        "pct_fake": 64.6,
+        "minority_frac": 0.354,
+        "balanced_v1": false,
+        "informative": true
+      },
+      {
+        "group": "FC_BOATOS",
+        "channel": "agency_claim",
+        "n": 10774,
+        "n_fake": 10774,
+        "n_true": 0,
+        "pct_fake": 100.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "Fake.br",
+        "channel": "portal",
+        "n": 7160,
+        "n_fake": 3580,
+        "n_true": 3580,
+        "pct_fake": 50.0,
+        "minority_frac": 0.5,
+        "balanced_v1": true,
+        "informative": false
+      },
+      {
+        "group": "EXT_LIARBR",
+        "channel": "external_claim",
+        "n": 6996,
+        "n_fake": 2495,
+        "n_true": 4501,
+        "pct_fake": 35.66,
+        "minority_frac": 0.3566,
+        "balanced_v1": false,
+        "informative": true
+      },
+      {
+        "group": "FakeWhatsApp.BR_2018",
+        "channel": "whatsapp",
+        "n": 6381,
+        "n_fake": 3055,
+        "n_true": 3326,
+        "pct_fake": 47.88,
+        "minority_frac": 0.4788,
+        "balanced_v1": true,
+        "informative": false
+      },
+      {
+        "group": "FC_EFARSAS",
+        "channel": "agency_claim",
+        "n": 3208,
+        "n_fake": 2777,
+        "n_true": 431,
+        "pct_fake": 86.56,
+        "minority_frac": 0.1344,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "FC_G1",
+        "channel": "agency_claim",
+        "n": 3187,
+        "n_fake": 3075,
+        "n_true": 112,
+        "pct_fake": 96.49,
+        "minority_frac": 0.0351,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "EXT_AVERITECBR",
+        "channel": "external_claim",
+        "n": 2925,
+        "n_fake": 2023,
+        "n_true": 902,
+        "pct_fake": 69.16,
+        "minority_frac": 0.3084,
+        "balanced_v1": false,
+        "informative": true
+      },
+      {
+        "group": "true",
+        "channel": "press_true",
+        "n": 2710,
+        "n_fake": 0,
+        "n_true": 2710,
+        "pct_fake": 0.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "FC_BOATOS_VIRAL",
+        "channel": "social",
+        "n": 2360,
+        "n_fake": 2360,
+        "n_true": 0,
+        "pct_fake": 100.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "COVID19.BR",
+        "channel": "covid",
+        "n": 1931,
+        "n_fake": 820,
+        "n_true": 1111,
+        "pct_fake": 42.47,
+        "minority_frac": 0.4247,
+        "balanced_v1": true,
+        "informative": false
+      },
+      {
+        "group": "FC_LUPA",
+        "channel": "agency_claim",
+        "n": 1437,
+        "n_fake": 1418,
+        "n_true": 19,
+        "pct_fake": 98.68,
+        "minority_frac": 0.0132,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "NEWS_PODER360",
+        "channel": "press_true",
+        "n": 1334,
+        "n_fake": 0,
+        "n_true": 1334,
+        "pct_fake": 0.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "NEWS_BRASILDEFATO",
+        "channel": "press_true",
+        "n": 900,
+        "n_fake": 0,
+        "n_true": 900,
+        "pct_fake": 0.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "NEWS_OECO",
+        "channel": "press_true",
+        "n": 468,
+        "n_fake": 0,
+        "n_true": 468,
+        "pct_fake": 0.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "NEWS_ECO",
+        "channel": "press_true",
+        "n": 445,
+        "n_fake": 0,
+        "n_true": 445,
+        "pct_fake": 0.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "COVID19.BR_raw",
+        "channel": "covid",
+        "n": 373,
+        "n_fake": 59,
+        "n_true": 314,
+        "pct_fake": 15.82,
+        "minority_frac": 0.1582,
+        "balanced_v1": true,
+        "informative": false
+      },
+      {
+        "group": "LLM4BR_300",
+        "channel": "llm",
+        "n": 299,
+        "n_fake": 148,
+        "n_true": 151,
+        "pct_fake": 49.5,
+        "minority_frac": 0.495,
+        "balanced_v1": true,
+        "informative": false
+      },
+      {
+        "group": "FC_COMPROVA",
+        "channel": "agency_claim",
+        "n": 249,
+        "n_fake": 242,
+        "n_true": 7,
+        "pct_fake": 97.19,
+        "minority_frac": 0.0281,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "MuMiN-PT",
+        "channel": "social",
+        "n": 222,
+        "n_fake": 203,
+        "n_true": 19,
+        "pct_fake": 91.44,
+        "minority_frac": 0.0856,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "FC_FOLHA",
+        "channel": "agency_claim",
+        "n": 211,
+        "n_fake": 208,
+        "n_true": 3,
+        "pct_fake": 98.58,
+        "minority_frac": 0.0142,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "FC_SBT",
+        "channel": "agency_claim",
+        "n": 210,
+        "n_fake": 204,
+        "n_true": 6,
+        "pct_fake": 97.14,
+        "minority_frac": 0.0286,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "FC_BEREIA",
+        "channel": "agency_claim",
+        "n": 202,
+        "n_fake": 173,
+        "n_true": 29,
+        "pct_fake": 85.64,
+        "minority_frac": 0.1436,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "Fake.br_raw",
+        "channel": "portal",
+        "n": 39,
+        "n_fake": 20,
+        "n_true": 19,
+        "pct_fake": 51.28,
+        "minority_frac": 0.4872,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "FC_NEXO",
+        "channel": "agency_claim",
+        "n": 9,
+        "n_fake": 9,
+        "n_true": 0,
+        "pct_fake": 100.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "MuMiN-PT_raw",
+        "channel": "social",
+        "n": 4,
+        "n_fake": 4,
+        "n_true": 0,
+        "pct_fake": 100.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      }
+    ],
+    "by_dataset_all_n": 27,
+    "by_channel": [
+      {
+        "channel": "agency_claim",
+        "n": 50665,
+        "n_fake": 46224,
+        "n_true": 4441,
+        "pct_fake": 91.23
+      },
+      {
+        "channel": "external_claim",
+        "n": 9921,
+        "n_fake": 4518,
+        "n_true": 5403,
+        "pct_fake": 45.54
+      },
+      {
+        "channel": "portal",
+        "n": 7199,
+        "n_fake": 3600,
+        "n_true": 3599,
+        "pct_fake": 50.01
+      },
+      {
+        "channel": "whatsapp",
+        "n": 6381,
+        "n_fake": 3055,
+        "n_true": 3326,
+        "pct_fake": 47.88
+      },
+      {
+        "channel": "press_true",
+        "n": 5857,
+        "n_fake": 0,
+        "n_true": 5857,
+        "pct_fake": 0.0
+      },
+      {
+        "channel": "social",
+        "n": 2586,
+        "n_fake": 2567,
+        "n_true": 19,
+        "pct_fake": 99.27
+      },
+      {
+        "channel": "covid",
+        "n": 2304,
+        "n_fake": 879,
+        "n_true": 1425,
+        "pct_fake": 38.15
+      },
+      {
+        "channel": "llm",
+        "n": 299,
+        "n_fake": 148,
+        "n_true": 151,
+        "pct_fake": 49.5
+      }
+    ],
+    "prefix_groups": [
+      {
+        "group": "FC_POLIGRAFO",
+        "channel": "agency_claim",
+        "n": 10831,
+        "n_fake": 6997,
+        "n_true": 3834,
+        "pct_fake": 64.6,
+        "minority_frac": 0.354,
+        "balanced_v1": false,
+        "informative": true
+      },
+      {
+        "group": "FC_BOATOS",
+        "channel": "agency_claim",
+        "n": 10774,
+        "n_fake": 10774,
+        "n_true": 0,
+        "pct_fake": 100.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "EXT_LIARBR",
+        "channel": "external_claim",
+        "n": 6996,
+        "n_fake": 2495,
+        "n_true": 4501,
+        "pct_fake": 35.66,
+        "minority_frac": 0.3566,
+        "balanced_v1": false,
+        "informative": true
+      },
+      {
+        "group": "FC_EFARSAS",
+        "channel": "agency_claim",
+        "n": 3208,
+        "n_fake": 2777,
+        "n_true": 431,
+        "pct_fake": 86.56,
+        "minority_frac": 0.1344,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "FC_G1",
+        "channel": "agency_claim",
+        "n": 3187,
+        "n_fake": 3075,
+        "n_true": 112,
+        "pct_fake": 96.49,
+        "minority_frac": 0.0351,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "EXT_AVERITECBR",
+        "channel": "external_claim",
+        "n": 2925,
+        "n_fake": 2023,
+        "n_true": 902,
+        "pct_fake": 69.16,
+        "minority_frac": 0.3084,
+        "balanced_v1": false,
+        "informative": true
+      },
+      {
+        "group": "FC_BOATOS_VIRAL",
+        "channel": "social",
+        "n": 2360,
+        "n_fake": 2360,
+        "n_true": 0,
+        "pct_fake": 100.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "FC_LUPA",
+        "channel": "agency_claim",
+        "n": 1437,
+        "n_fake": 1418,
+        "n_true": 19,
+        "pct_fake": 98.68,
+        "minority_frac": 0.0132,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "NEWS_PODER360",
+        "channel": "press_true",
+        "n": 1334,
+        "n_fake": 0,
+        "n_true": 1334,
+        "pct_fake": 0.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "NEWS_BRASILDEFATO",
+        "channel": "press_true",
+        "n": 900,
+        "n_fake": 0,
+        "n_true": 900,
+        "pct_fake": 0.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "NEWS_OECO",
+        "channel": "press_true",
+        "n": 468,
+        "n_fake": 0,
+        "n_true": 468,
+        "pct_fake": 0.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "NEWS_ECO",
+        "channel": "press_true",
+        "n": 445,
+        "n_fake": 0,
+        "n_true": 445,
+        "pct_fake": 0.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "FC_COMPROVA",
+        "channel": "agency_claim",
+        "n": 249,
+        "n_fake": 242,
+        "n_true": 7,
+        "pct_fake": 97.19,
+        "minority_frac": 0.0281,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "FC_FOLHA",
+        "channel": "agency_claim",
+        "n": 211,
+        "n_fake": 208,
+        "n_true": 3,
+        "pct_fake": 98.58,
+        "minority_frac": 0.0142,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "FC_SBT",
+        "channel": "agency_claim",
+        "n": 210,
+        "n_fake": 204,
+        "n_true": 6,
+        "pct_fake": 97.14,
+        "minority_frac": 0.0286,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "FC_BEREIA",
+        "channel": "agency_claim",
+        "n": 202,
+        "n_fake": 173,
+        "n_true": 29,
+        "pct_fake": 85.64,
+        "minority_frac": 0.1436,
+        "balanced_v1": false,
+        "informative": false
+      },
+      {
+        "group": "FC_NEXO",
+        "channel": "agency_claim",
+        "n": 9,
+        "n_fake": 9,
+        "n_true": 0,
+        "pct_fake": 100.0,
+        "minority_frac": 0.0,
+        "balanced_v1": false,
+        "informative": false
+      }
+    ],
+    "informative_groups": [
+      {
+        "group": "FC_POLIGRAFO",
+        "channel": "agency_claim",
+        "n": 10831,
+        "n_fake": 6997,
+        "n_true": 3834,
+        "pct_fake": 64.6,
+        "minority_frac": 0.354,
+        "balanced_v1": false,
+        "informative": true
+      },
+      {
+        "group": "EXT_LIARBR",
+        "channel": "external_claim",
+        "n": 6996,
+        "n_fake": 2495,
+        "n_true": 4501,
+        "pct_fake": 35.66,
+        "minority_frac": 0.3566,
+        "balanced_v1": false,
+        "informative": true
+      },
+      {
+        "group": "EXT_AVERITECBR",
+        "channel": "external_claim",
+        "n": 2925,
+        "n_fake": 2023,
+        "n_true": 902,
+        "pct_fake": 69.16,
+        "minority_frac": 0.3084,
+        "balanced_v1": false,
+        "informative": true
+      }
+    ],
+    "informative_group_count": 3,
+    "v1_balanced_present": [
+      {
+        "group": "Fake.br",
+        "channel": "portal",
+        "n": 7160,
+        "n_fake": 3580,
+        "n_true": 3580,
+        "pct_fake": 50.0,
+        "minority_frac": 0.5,
+        "balanced_v1": true,
+        "informative": false
+      },
+      {
+        "group": "FakeWhatsApp.BR_2018",
+        "channel": "whatsapp",
+        "n": 6381,
+        "n_fake": 3055,
+        "n_true": 3326,
+        "pct_fake": 47.88,
+        "minority_frac": 0.4788,
+        "balanced_v1": true,
+        "informative": false
+      },
+      {
+        "group": "COVID19.BR",
+        "channel": "covid",
+        "n": 1931,
+        "n_fake": 820,
+        "n_true": 1111,
+        "pct_fake": 42.47,
+        "minority_frac": 0.4247,
+        "balanced_v1": true,
+        "informative": false
+      },
+      {
+        "group": "COVID19.BR_raw",
+        "channel": "covid",
+        "n": 373,
+        "n_fake": 59,
+        "n_true": 314,
+        "pct_fake": 15.82,
+        "minority_frac": 0.1582,
+        "balanced_v1": true,
+        "informative": false
+      },
+      {
+        "group": "LLM4BR_300",
+        "channel": "llm",
+        "n": 299,
+        "n_fake": 148,
+        "n_true": 151,
+        "pct_fake": 49.5,
+        "minority_frac": 0.495,
+        "balanced_v1": true,
+        "informative": false
+      }
+    ],
+    "length": {
+      "words": {
+        "fake": {
+          "n": 60991,
+          "mean": 42.7,
+          "min": 3,
+          "p50": 17.0,
+          "p90": 93.0,
+          "p95": 190.0,
+          "p99": 471.0,
+          "max": 4859
+        },
+        "true": {
+          "n": 24221,
+          "mean": 58.8,
+          "min": 3,
+          "p50": 18.0,
+          "p90": 162.0,
+          "p95": 244.0,
+          "p99": 530.0,
+          "max": 5938
+        },
+        "all": {
+          "n": 85212,
+          "mean": 47.3,
+          "min": 3,
+          "p50": 17.0,
+          "p90": 121.9,
+          "p95": 209.0,
+          "p99": 490.0,
+          "max": 5938
+        }
+      },
+      "chars": {
+        "fake": {
+          "n": 60991,
+          "mean": 257.6,
+          "min": 15,
+          "p50": 100.0,
+          "p90": 559.0,
+          "p95": 1147.0,
+          "p99": 2853.4,
+          "max": 31468
+        },
+        "true": {
+          "n": 24221,
+          "mean": 359.0,
+          "min": 12,
+          "p50": 107.0,
+          "p90": 994.0,
+          "p95": 1494.0,
+          "p99": 3337.2,
+          "max": 33073
+        }
+      },
+      "truncation": {
+        "over_512_words": 776,
+        "over_512_words_pct": 0.91,
+        "over_510_words": 784,
+        "over_400_words": 1287,
+        "fake_over_512": 508,
+        "true_over_512": 268,
+        "char_p95_over_2000": 1848
+      },
+      "word_len_column_check": {
+        "rows_word_len_missing": 0,
+        "rows_word_len_differs_from_text": 2634,
+        "rows_word_len_differs_gt_2": 524,
+        "corr": 0.9999
+      }
+    },
+    "duplicates": {
+      "normalized_unique_texts": 85212,
+      "normalized_duplicated_rows_extra": 0,
+      "normalized_duplicated_rows_total": 0,
+      "normalized_dup_row_rate_pct": 0.0,
+      "raw_exact_duplicated_rows_extra": 0,
+      "conflicting_texts_fake_and_true": 0,
+      "conflicting_rows_involved": 0,
+      "conflicting_row_rate_pct": 0.0,
+      "top_duplicates": [],
+      "top_conflicts": []
+    },
+    "provenance": {
+      "coverage_rows": 45746,
+      "coverage_pct": 53.68,
+      "lang_variant": [
+        {
+          "lang_variant": "pt-BR",
+          "n": 45297,
+          "n_fake": 32751,
+          "n_true": 12546,
+          "pct_fake": 72.3
+        },
+        {
+          "lang_variant": "<sem_prov>",
+          "n": 39466,
+          "n_fake": 28236,
+          "n_true": 11230,
+          "pct_fake": 71.55
+        },
+        {
+          "lang_variant": "pt-PT",
+          "n": 449,
+          "n_fake": 4,
+          "n_true": 445,
+          "pct_fake": 0.89
+        }
+      ],
+      "publisher_top15": [
+        {
+          "publisher": "<sem_prov>",
+          "n": 39466,
+          "n_fake": 28236,
+          "n_true": 11230,
+          "pct_fake": 71.55
+        },
+        {
+          "publisher": "boatos",
+          "n": 11499,
+          "n_fake": 11499,
+          "n_true": 0,
+          "pct_fake": 100.0
+        },
+        {
+          "publisher": "poligrafo",
+          "n": 10831,
+          "n_fake": 6997,
+          "n_true": 3834,
+          "pct_fake": 64.6
+        },
+        {
+          "publisher": "ext_liarbr",
+          "n": 6996,
+          "n_fake": 2495,
+          "n_true": 4501,
+          "pct_fake": 35.66
+        },
+        {
+          "publisher": "efarsas",
+          "n": 3208,
+          "n_fake": 2777,
+          "n_true": 431,
+          "pct_fake": 86.56
+        },
+        {
+          "publisher": "g1",
+          "n": 3187,
+          "n_fake": 3075,
+          "n_true": 112,
+          "pct_fake": 96.49
+        },
+        {
+          "publisher": "ext_averitecbr",
+          "n": 2925,
+          "n_fake": 2023,
+          "n_true": 902,
+          "pct_fake": 69.16
+        },
+        {
+          "publisher": "boatos.org",
+          "n": 1635,
+          "n_fake": 1635,
+          "n_true": 0,
+          "pct_fake": 100.0
+        },
+        {
+          "publisher": "lupa",
+          "n": 1437,
+          "n_fake": 1418,
+          "n_true": 19,
+          "pct_fake": 98.68
+        },
+        {
+          "publisher": "poder360",
+          "n": 1334,
+          "n_fake": 0,
+          "n_true": 1334,
+          "pct_fake": 0.0
+        },
+        {
+          "publisher": "brasildefato",
+          "n": 900,
+          "n_fake": 0,
+          "n_true": 900,
+          "pct_fake": 0.0
+        },
+        {
+          "publisher": "oeco",
+          "n": 468,
+          "n_fake": 0,
+          "n_true": 468,
+          "pct_fake": 0.0
+        },
+        {
+          "publisher": "eco",
+          "n": 445,
+          "n_fake": 0,
+          "n_true": 445,
+          "pct_fake": 0.0
+        },
+        {
+          "publisher": "comprova",
+          "n": 249,
+          "n_fake": 242,
+          "n_true": 7,
+          "pct_fake": 97.19
+        },
+        {
+          "publisher": "folha",
+          "n": 211,
+          "n_fake": 208,
+          "n_true": 3,
+          "pct_fake": 98.58
+        }
+      ],
+      "text_role": [
+        {
+          "text_role": "<sem_prov>",
+          "n_fake": 28236,
+          "n_true": 11230
+        },
+        {
+          "text_role": "claim",
+          "n_fake": 30395,
+          "n_true": 9844
+        },
+        {
+          "text_role": "headline",
+          "n_fake": 0,
+          "n_true": 3147
+        },
+        {
+          "text_role": "viral",
+          "n_fake": 2360,
+          "n_true": 0
+        }
+      ],
+      "collector": [
+        {
+          "collector": "<sem_prov>",
+          "n_fake": 28236,
+          "n_true": 11230,
+          "n": 39466
+        },
+        {
+          "collector": "external",
+          "n_fake": 4518,
+          "n_true": 5403,
+          "n": 9921
+        },
+        {
+          "collector": "feed",
+          "n_fake": 3721,
+          "n_true": 35,
+          "n": 3756
+        },
+        {
+          "collector": "sitemap",
+          "n_fake": 10067,
+          "n_true": 3946,
+          "n": 14013
+        },
+        {
+          "collector": "wp",
+          "n_fake": 14449,
+          "n_true": 3607,
+          "n": 18056
+        }
+      ],
+      "is_ptpt_url_rule": 18420,
+      "is_ptpt_x_lang": [
+        {
+          "is_ptpt_url_rule": false,
+          "lang_variant": "<sem_prov>",
+          "n": 32322
+        },
+        {
+          "is_ptpt_url_rule": false,
+          "lang_variant": "pt-BR",
+          "n": 34470
+        },
+        {
+          "is_ptpt_url_rule": true,
+          "lang_variant": "<sem_prov>",
+          "n": 7144
+        },
+        {
+          "is_ptpt_url_rule": true,
+          "lang_variant": "pt-BR",
+          "n": 10827
+        },
+        {
+          "is_ptpt_url_rule": true,
+          "lang_variant": "pt-PT",
+          "n": 449
+        }
+      ],
+      "mentions_ai_counts": {
+        "0.0": 45209,
+        "<NaN>": 39466,
+        "1.0": 537
+      },
+      "mentions_ai_1_by_group": {
+        "FC_G1": 243,
+        "FC_BOATOS": 160,
+        "FC_BOATOS_VIRAL": 77,
+        "FC_POLIGRAFO": 27,
+        "FC_EFARSAS": 13,
+        "FC_LUPA": 10,
+        "EXT_AVERITECBR": 4,
+        "EXT_LIARBR": 3
+      },
+      "rating_norm_counts": {
+        "<NaN>": 42613,
+        "falso": 23995,
+        "verdadeiro": 8821,
+        "fake": 3074,
+        "refutado": 2023,
+        "verdadeiro, mas": 1179,
+        "suportado": 902,
+        "pimenta na lingua": 746,
+        "impreciso": 577,
+        "enganoso": 450,
+        "descontextualizado": 335,
+        "manipulado": 179,
+        "fora de contexto": 147,
+        "fato": 112,
+        "exagerado": 28,
+        "satira": 13,
+        "comprovado": 9,
+        "insustentavel": 3,
+        "falso uma montagem de fotos sobre os estagios das obras na br-163 durante os governos do pt e de bolsonaro e falsa, pois usa imagens de 2017 e 2015, anteriores a posse do atual presidente": 1,
+        "enganoso; publicacao que viralizou no twitter e que anuncia uma estrada de ferro que ligaria as capitais do nordeste e apenas a ideia de um senador e que resgata um projeto de 2013 que nunca teve o estudo de viabilidade tecnica realizado": 1
+      }
+    },
+    "eras": {
+      "by_year": [
+        {
+          "year": -1,
+          "n": 20171,
+          "n_fake": 10418,
+          "n_true": 9753,
+          "pct_fake": 51.65
+        },
+        {
+          "year": 1920,
+          "n": 1,
+          "n_fake": 1,
+          "n_true": 0,
+          "pct_fake": 100.0
+        },
+        {
+          "year": 1921,
+          "n": 1,
+          "n_fake": 1,
+          "n_true": 0,
+          "pct_fake": 100.0
+        },
+        {
+          "year": 1922,
+          "n": 4,
+          "n_fake": 1,
+          "n_true": 3,
+          "pct_fake": 25.0
+        },
+        {
+          "year": 2004,
+          "n": 4,
+          "n_fake": 0,
+          "n_true": 4,
+          "pct_fake": 0.0
+        },
+        {
+          "year": 2005,
+          "n": 2,
+          "n_fake": 1,
+          "n_true": 1,
+          "pct_fake": 50.0
+        },
+        {
+          "year": 2006,
+          "n": 2,
+          "n_fake": 0,
+          "n_true": 2,
+          "pct_fake": 0.0
+        },
+        {
+          "year": 2007,
+          "n": 2,
+          "n_fake": 0,
+          "n_true": 2,
+          "pct_fake": 0.0
+        },
+        {
+          "year": 2008,
+          "n": 8,
+          "n_fake": 1,
+          "n_true": 7,
+          "pct_fake": 12.5
+        },
+        {
+          "year": 2009,
+          "n": 15,
+          "n_fake": 1,
+          "n_true": 14,
+          "pct_fake": 6.67
+        },
+        {
+          "year": 2010,
+          "n": 72,
+          "n_fake": 40,
+          "n_true": 32,
+          "pct_fake": 55.56
+        },
+        {
+          "year": 2011,
+          "n": 114,
+          "n_fake": 68,
+          "n_true": 46,
+          "pct_fake": 59.65
+        },
+        {
+          "year": 2012,
+          "n": 184,
+          "n_fake": 95,
+          "n_true": 89,
+          "pct_fake": 51.63
+        },
+        {
+          "year": 2013,
+          "n": 342,
+          "n_fake": 243,
+          "n_true": 99,
+          "pct_fake": 71.05
+        },
+        {
+          "year": 2014,
+          "n": 757,
+          "n_fake": 667,
+          "n_true": 90,
+          "pct_fake": 88.11
+        },
+        {
+          "year": 2015,
+          "n": 700,
+          "n_fake": 592,
+          "n_true": 108,
+          "pct_fake": 84.57
+        },
+        {
+          "year": 2016,
+          "n": 2160,
+          "n_fake": 1577,
+          "n_true": 583,
+          "pct_fake": 73.01
+        },
+        {
+          "year": 2017,
+          "n": 3185,
+          "n_fake": 1555,
+          "n_true": 1630,
+          "pct_fake": 48.82
+        },
+        {
+          "year": 2018,
+          "n": 10591,
+          "n_fake": 6067,
+          "n_true": 4524,
+          "pct_fake": 57.28
+        },
+        {
+          "year": 2019,
+          "n": 6669,
+          "n_fake": 5403,
+          "n_true": 1266,
+          "pct_fake": 81.02
+        },
+        {
+          "year": 2020,
+          "n": 10102,
+          "n_fake": 8753,
+          "n_true": 1349,
+          "pct_fake": 86.65
+        },
+        {
+          "year": 2021,
+          "n": 7566,
+          "n_fake": 6496,
+          "n_true": 1070,
+          "pct_fake": 85.86
+        },
+        {
+          "year": 2022,
+          "n": 7178,
+          "n_fake": 6108,
+          "n_true": 1070,
+          "pct_fake": 85.09
+        },
+        {
+          "year": 2023,
+          "n": 4345,
+          "n_fake": 3678,
+          "n_true": 667,
+          "pct_fake": 84.65
+        },
+        {
+          "year": 2024,
+          "n": 4295,
+          "n_fake": 3603,
+          "n_true": 692,
+          "pct_fake": 83.89
+        },
+        {
+          "year": 2025,
+          "n": 3890,
+          "n_fake": 3131,
+          "n_true": 759,
+          "pct_fake": 80.49
+        },
+        {
+          "year": 2026,
+          "n": 2852,
+          "n_fake": 2491,
+          "n_true": 361,
+          "pct_fake": 87.34
+        }
+      ],
+      "by_era": [
+        {
+          "era": "<=2017",
+          "n": 7553,
+          "n_fake": 4843,
+          "n_true": 2710,
+          "pct_fake": 64.12
+        },
+        {
+          "era": "2018-2022",
+          "n": 42106,
+          "n_fake": 32827,
+          "n_true": 9279,
+          "pct_fake": 77.96
+        },
+        {
+          "era": ">=2023",
+          "n": 15382,
+          "n_fake": 12903,
+          "n_true": 2479,
+          "pct_fake": 83.88
+        },
+        {
+          "era": "<sem_data>",
+          "n": 20171,
+          "n_fake": 10418,
+          "n_true": 9753,
+          "pct_fake": 51.65
+        }
+      ],
+      "date_min": "1920-06-30 00:00:00",
+      "date_max": "2026-09-11 00:00:00",
+      "date_nan": 20171
+    },
+    "group_leakage": {
+      "n_groups": 27,
+      "n_constant_label_groups": 10,
+      "pct_constant_label_groups": 37.04,
+      "rows_in_constant_groups": 39351,
+      "pct_rows_in_constant_groups": 46.18,
+      "constant_groups": [
+        {
+          "group": "fakes",
+          "n": 20347,
+          "label": "fake",
+          "channel": "agency_claim"
+        },
+        {
+          "group": "FC_BOATOS",
+          "n": 10774,
+          "label": "fake",
+          "channel": "agency_claim"
+        },
+        {
+          "group": "true",
+          "n": 2710,
+          "label": "true",
+          "channel": "press_true"
+        },
+        {
+          "group": "FC_BOATOS_VIRAL",
+          "n": 2360,
+          "label": "fake",
+          "channel": "social"
+        },
+        {
+          "group": "NEWS_PODER360",
+          "n": 1334,
+          "label": "true",
+          "channel": "press_true"
+        },
+        {
+          "group": "NEWS_BRASILDEFATO",
+          "n": 900,
+          "label": "true",
+          "channel": "press_true"
+        },
+        {
+          "group": "NEWS_OECO",
+          "n": 468,
+          "label": "true",
+          "channel": "press_true"
+        },
+        {
+          "group": "NEWS_ECO",
+          "n": 445,
+          "label": "true",
+          "channel": "press_true"
+        },
+        {
+          "group": "FC_NEXO",
+          "n": 9,
+          "label": "fake",
+          "channel": "agency_claim"
+        },
+        {
+          "group": "MuMiN-PT_raw",
+          "n": 4,
+          "label": "fake",
+          "channel": "social"
+        }
+      ],
+      "constant_channels": [
+        "press_true"
+      ],
+      "channel_purity": [
+        {
+          "channel": "press_true",
+          "n_unique_labels": 1
+        },
+        {
+          "channel": "agency_claim",
+          "n_unique_labels": 2
+        },
+        {
+          "channel": "external_claim",
+          "n_unique_labels": 2
+        },
+        {
+          "channel": "covid",
+          "n_unique_labels": 2
+        },
+        {
+          "channel": "llm",
+          "n_unique_labels": 2
+        },
+        {
+          "channel": "portal",
+          "n_unique_labels": 2
+        },
+        {
+          "channel": "social",
+          "n_unique_labels": 2
+        },
+        {
+          "channel": "whatsapp",
+          "n_unique_labels": 2
+        }
+      ]
+    }
+  },
+  "eval_metadata": {
+    "sanitized_columns": [
+      "rid",
+      "dataset_name",
+      "source_type",
+      "source_description",
+      "label",
+      "date_iso",
+      "url_review",
+      "text",
+      "text_clean",
+      "text_no_url",
+      "extracted_urls",
+      "is_duplicated",
+      "is_null",
+      "too_short",
+      "factcheck_rating",
+      "factcheck_claimant",
+      "factcheck_url",
+      "char_len",
+      "word_len",
+      "num_exclamations",
+      "num_questions",
+      "num_ellipsis",
+      "uppercase_word_ratio"
+    ],
+    "labels_columns": [
+      "rid",
+      "text",
+      "label",
+      "label_source",
+      "label_tier",
+      "auto_label",
+      "confidence",
+      "method",
+      "evidence",
+      "train_label"
+    ],
+    "provenance_columns": [
+      "rid",
+      "label_source",
+      "text_role",
+      "publisher",
+      "lang_variant",
+      "collector",
+      "source_url",
+      "collected_at",
+      "rating_norm",
+      "mentions_ai"
+    ],
+    "suggested_eval_groups": [
+      {
+        "column": "publisher",
+        "source": "provenance",
+        "cardinality": 17,
+        "n_pool": 45746
+      },
+      {
+        "column": "lang_variant",
+        "source": "provenance",
+        "cardinality": 2,
+        "n_pool": 45746
+      },
+      {
+        "column": "era (de date_iso)",
+        "source": "sanitized",
+        "cardinality": 4,
+        "n_pool": 65041
+      },
+      {
+        "column": "channel (channel_of)",
+        "source": "derived",
+        "cardinality": 8,
+        "n_pool": 85212
+      },
+      {
+        "column": "dataset_name",
+        "source": "sanitized",
+        "cardinality": 27,
+        "n_pool": 85212
+      },
+      {
+        "column": "label_tier",
+        "source": "labels",
+        "cardinality": 6,
+        "n_pool": 85212
+      },
+      {
+        "column": "label_source (labels)",
+        "source": "labels",
+        "cardinality": 3,
+        "n_pool": 85212
+      }
+    ]
+  },
+  "surprises": {
+    "text_encoding": {
+      "text": {
+        "notnull": 291521,
+        "empty": 0,
+        "has_fffd": 4,
+        "has_latin_ext_ab": 50
+      },
+      "text_clean": {
+        "notnull": 291521,
+        "empty": 0,
+        "has_fffd": 4,
+        "has_latin_ext_ab": 6
+      },
+      "text_no_url": {
+        "notnull": 291521,
+        "empty": 0,
+        "has_fffd": 4,
+        "has_latin_ext_ab": 50
+      }
+    },
+    "text_columns_present": [
+      "text",
+      "text_clean",
+      "text_no_url"
+    ],
+    "empty_text_full_sanitized": {
+      "text": 0,
+      "text_clean": 0,
+      "text_no_url": 0
+    },
+    "train_label_capitalized_True": 0,
+    "orig_label_casefold_mismatch_in_pool": 0,
+    "text_labeled_rows_dropped_by_text_filter": 0,
+    "date_range_full": {
+      "min": "1920-06-30 00:00:00",
+      "max": "2026-09-11 00:00:00",
+      "nan": 20171,
+      "nan_pct": 6.92
+    },
+    "future_dates_full": {},
+    "suspect_old_dates_full": {
+      "1920": 1,
+      "1921": 1,
+      "1922": 4
+    },
+    "fffd_examples": [
+      "Paraná Pesquisas: Bolsonaro chega a quase 70�os votos válidos em SP -",
+      "Paraná Pesquisas: Bolsonaro chega a quase 70�dos votos válidos em SP -",
+      "*ATENÇÃO* ACABOU O AMOR �� Isso é muito sério! Não é boato. Os grupos já estão se organizando no whatsapp. Não saiam de ",
+      "Como é sexta-feira, vou fazer uma proposta… �� Uma publicação compartilhada por Carol Barcellos (@carolbarcellos) em Set"
+    ],
+    "full_normalized_duplicated_rows_extra": 0,
+    "news_groups_without_train_label": 206309,
+    "news_in_pool": {
+      "n": 3147,
+      "by_group": {
+        "NEWS_PODER360": 1334,
+        "NEWS_BRASILDEFATO": 900,
+        "NEWS_OECO": 468,
+        "NEWS_ECO": 445
+      },
+      "by_tier": {
+        "llm_local": 3092,
+        "checker_match": 46,
+        "corroborated": 9
+      },
+      "by_label": {
+        "true": 3147
+      }
+    },
+    "news_total": 209456,
+    "dataset_names": 27
+  },
+  "timings_s": {
+    "full_pass": 64.2,
+    "total": 80.6
+  }
+}

@@ -1,0 +1,15 @@
+[E0] device=cpu amp=off dtype=None scaler=False torch=2.14.0+cpu transformers=5.17.0 cuda=None
+[E0] seed=42 cudnn.deterministic=True benchmark=False
+[E2] data=models/v6/processed/v6_pool.parquet splits=models/v6/processed/v6_splits.parquet split_col=full_iid
+[E2] removendo 4 linhas has_ufffd (defensivo): {'train': 3, 'val_sel': 0, 'val_calib': 0, 'eval:full_iid=test': 1}
+[E2] contagens (n, fake%):
+      train                            n= 63753 fake=73.31%
+      val_sel                          n=  9108 fake=73.31%
+      val_calib                        n=  4554 fake=73.30%
+      eval:full_iid=test               n= 13661 fake=73.31%
+[E2] interseccao rid treino x teste (full_iid=test): 0
+[E2] duplicatas texto-normalizado treino/val x teste: 0
+[E3] tokenizacao em 5.6s; 63753 treino / 9108 val_sel / 4554 val_calib / 13661 eval; workers=0 pin_memory=False
+[E3] tokens treino: media=48.9 p95=192 max=192
+[E4] congeladas embeddings + 6 camadas (43.1M treinaveis)
+[E4] steps/epoca=1993 total=3986 warmup=398 efetivo=32

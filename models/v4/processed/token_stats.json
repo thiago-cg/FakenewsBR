@@ -1,0 +1,92 @@
+{
+  "tokenizer": "neuralmind/bert-base-portuguese-cased",
+  "add_special_tokens": true,
+  "truncation": false,
+  "distributions": {
+    "informativos": {
+      "n": 36896,
+      "mean": 119.65,
+      "p50": 33.0,
+      "p90": 308.0,
+      "p95": 453.0,
+      "p99": 1046.05,
+      "max": 8575,
+      "pct_gt_128": 25.47,
+      "pct_gt_192": 18.82,
+      "pct_gt_256": 13.02,
+      "pct_gt_512": 4.06,
+      "tokenize_seconds": 3.12
+    },
+    "pool": {
+      "n": 85212,
+      "mean": 73.03,
+      "p50": 27.0,
+      "p90": 180.0,
+      "p95": 309.0,
+      "p99": 745.0,
+      "max": 8575,
+      "pct_gt_128": 12.84,
+      "pct_gt_192": 9.36,
+      "pct_gt_256": 6.52,
+      "pct_gt_512": 2.05,
+      "tokenize_seconds": 5.3
+    },
+    "train": {
+      "n": 25827,
+      "mean": 120.8,
+      "p50": 33.0,
+      "p90": 308.0,
+      "p95": 453.0,
+      "p99": 1081.74,
+      "max": 8575,
+      "pct_gt_128": 25.57,
+      "pct_gt_192": 18.97,
+      "pct_gt_256": 13.11,
+      "pct_gt_512": 4.08,
+      "tokenize_seconds": 2.18
+    }
+  },
+  "cost": {
+    "128": {
+      "cap": 128,
+      "batch_size": 32,
+      "mega": 50,
+      "tokens_pagos_por_epoca": 1544960,
+      "tokens_pagos_por_epoca_milhoes": 1.545,
+      "media_por_amostra": 59.82,
+      "n_batches": 808,
+      "pct_batches_no_cap": 26.61
+    },
+    "192": {
+      "cap": 192,
+      "batch_size": 32,
+      "mega": 50,
+      "tokens_pagos_por_epoca": 1932512,
+      "tokens_pagos_por_epoca_milhoes": 1.933,
+      "media_por_amostra": 74.83,
+      "n_batches": 808,
+      "pct_batches_no_cap": 19.8
+    },
+    "256": {
+      "cap": 256,
+      "batch_size": 32,
+      "mega": 50,
+      "tokens_pagos_por_epoca": 2213056,
+      "tokens_pagos_por_epoca_milhoes": 2.213,
+      "media_por_amostra": 85.69,
+      "n_batches": 808,
+      "pct_batches_no_cap": 14.11
+    }
+  },
+  "cap_tokens_pagos_por_epoca": {
+    "128": 1544960,
+    "192": 1932512,
+    "256": 2213056
+  },
+  "razao_256_192": 1.1452,
+  "assumptions": {
+    "cost_split": "bal_iid train",
+    "batching": "length_grouped_batches(batch=32, mega=50, seed=42), comprimentos truncados no cap",
+    "tokens_pagos": "sum(len(batch) * max(len_no_batch))"
+  }
+}

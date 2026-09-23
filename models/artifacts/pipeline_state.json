@@ -1,0 +1,54 @@
+{
+  "iniciado_em": "2026-09-10T02:34:11",
+  "1_embed_export_base": {
+    "status": "skipped",
+    "artifact": "models/artifacts/bertimbau.onnx"
+  },
+  "2_embed_run_base": {
+    "status": "skipped",
+    "artifact": "models/artifacts/embeddings.npy"
+  },
+  "3_score_frozen": {
+    "status": "ok",
+    "returncode": 0,
+    "minutos": 0.7,
+    "log": "models/artifacts/logs/3_score_frozen.log"
+  },
+  "4_score_frozen_nostyle": {
+    "status": "ok",
+    "returncode": 0,
+    "minutos": 0.5,
+    "log": "models/artifacts/logs/4_score_frozen_nostyle.log"
+  },
+  "5_finetune": {
+    "status": "ok",
+    "returncode": 0,
+    "minutos": 226.3,
+    "log": "models/artifacts/logs/5_finetune.log"
+  },
+  "6_embed_export_ft": {
+    "status": "ok",
+    "returncode": 0,
+    "minutos": 0.7,
+    "log": "models/artifacts/logs/6_embed_export_ft.log"
+  },
+  "7_embed_run_ft": {
+    "status": "ok",
+    "returncode": 0,
+    "minutos": 26.0,
+    "log": "models/artifacts/logs/7_embed_run_ft.log"
+  },
+  "8_score_finetuned": {
+    "status": "ok",
+    "returncode": 0,
+    "minutos": 0.6,
+    "log": "models/artifacts/logs/8_score_finetuned.log"
+  },
+  "9_relatorio": {
+    "status": "ok",
+    "returncode": 0,
+    "minutos": 0.0,
+    "log": "models/artifacts/logs/9_relatorio.log"
+  },
+  "terminado_em": "2026-09-10T06:49:03"
+}

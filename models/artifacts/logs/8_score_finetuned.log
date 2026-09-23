@@ -1,0 +1,202 @@
+embeddings (39466, 768) | features estilisticas: ['excl_rate', 'quest_rate', 'ellip_rate', 'uppercase_word_ratio']
+
+[iid] treino(n=27626 fake=71.5%) val(n=5920 fake=71.5%) teste(n=5920 fake=71.6%)
+
+### variante ERM (ingenua) — treino n=27626 (fake 71.5%), grupos=10
+  C escolhido=0.01  criterio=macro_f1  val=0.8217
+  Platt a=0.8245 b=-0.4864 | calibrado em n=2422 (prior 47.5% fake, modo=balanced)
+  ECE val 0.0284 -> 0.0129
+
+======================================================================
+iid | variante ERM (ingenua) (calibrado)
+======================================================================
+GLOBAL  n=5920  acc=0.8451  macro-F1=0.8136  F1(fake)=0.8902
+        PR-AUC=0.9532  ROC-AUC=0.9069  Brier=0.1087  ECE=0.0142
+
+POR GRUPO (ordenado do pior para o melhor):
+               group    n  minoria_n   fake_%    acc  macro_f1  f1_fake  roc_auc  pr_auc    ece  confiavel
+            MuMiN-PT   34          3  91.2000 0.8529    0.4603   0.9206   0.6559  0.9573 0.1095      False
+      COVID19.BR_raw   56          9  16.1000 0.6786    0.5714   0.3571   0.7470  0.3602 0.1894      False
+          COVID19.BR  290        123  42.4000 0.7483    0.7474   0.7326   0.8287  0.7655 0.0890       True
+FakeWhatsApp.BR_2018  957        458  47.9000 0.7732    0.7729   0.7639   0.8413  0.7947 0.0421       True
+          LLM4BR_300   44         22  50.0000 0.8864    0.8858   0.8780   0.9711  0.9767 0.0959      False
+             Fake.br 1074        537  50.0000 0.9786    0.9786   0.9783   0.9967  0.9958 0.0477       True
+               fakes 3052          0 100.0000 0.8827       NaN   0.9377      NaN     NaN 0.0323      False
+                true  406          0   0.0000 0.4655       NaN   0.0000      NaN     NaN 0.2415      False
+  (grupos com confiavel=False sao pequenos demais — n<100 ou minoria<20 — e ficam fora da manchete)
+
+>>> PIOR GRUPO macro-F1 = 0.7474   (metrica de manchete, so grupos confiaveis)
+>>> PIOR GRUPO (so grupos balanceados) = 0.7474
+    nos grupos balanceados (n=2421, 47.5% fake): acc=0.8612 macro-F1=0.8610 ECE=0.0115
+
+CASOS LIMITROFES  n=144  acc=0.9306  score medio=0.863
+FALSO PURO        n=934  acc=0.9507  score medio=0.897
+
+DIALETO  PT-PT: n=1077 macro-F1=0.6705 | resto: n=4843 macro-F1=0.8412
+
+  pesos das features estilisticas (auditoria):
+    quest_rate               +0.0592
+    ellip_rate               +0.0577
+    excl_rate                -0.0326
+    uppercase_word_ratio     -0.0150
+
+### variante DFR (honesta) — treino n=11301 (fake 47.5%), grupos=5, ponderado por celula
+  C escolhido=0.03  criterio=worst_group  val=0.8056
+  Platt a=0.7212 b=-0.0983 | calibrado em n=2422 (prior 47.5% fake, modo=balanced)
+  ECE val 0.1330 -> 0.1006
+
+======================================================================
+iid | variante DFR (honesta) (calibrado)
+======================================================================
+GLOBAL  n=5920  acc=0.7345  macro-F1=0.7172  F1(fake)=0.7870
+        PR-AUC=0.9326  ROC-AUC=0.8608  Brier=0.1917  ECE=0.1084
+
+POR GRUPO (ordenado do pior para o melhor):
+               group    n  minoria_n   fake_%    acc  macro_f1  f1_fake  roc_auc  pr_auc    ece  confiavel
+            MuMiN-PT   34          3  91.2000 0.7059    0.4940   0.8214   0.6882  0.9639 0.2263      False
+      COVID19.BR_raw   56          9  16.1000 0.7857    0.6348   0.4000   0.8156  0.3562 0.1537      False
+          COVID19.BR  290        123  42.4000 0.7552    0.7516   0.7216   0.8482  0.7993 0.1108       True
+FakeWhatsApp.BR_2018  957        458  47.9000 0.7879    0.7877   0.7815   0.8601  0.8229 0.0425       True
+          LLM4BR_300   44         22  50.0000 0.9091    0.9089   0.9048   0.9814  0.9816 0.0554      False
+             Fake.br 1074        537  50.0000 0.9795    0.9795   0.9794   0.9977  0.9977 0.0345       True
+               fakes 3052          0 100.0000 0.6157       NaN   0.7621      NaN     NaN 0.1975      False
+                true  406          0   0.0000 0.8128       NaN   0.0000      NaN     NaN 0.0566      False
+  (grupos com confiavel=False sao pequenos demais — n<100 ou minoria<20 — e ficam fora da manchete)
+
+>>> PIOR GRUPO macro-F1 = 0.7516   (metrica de manchete, so grupos confiaveis)
+>>> PIOR GRUPO (so grupos balanceados) = 0.7516
+    nos grupos balanceados (n=2421, 47.5% fake): acc=0.8711 macro-F1=0.8709 ECE=0.0190
+
+CASOS LIMITROFES  n=144  acc=0.6458  score medio=0.618
+FALSO PURO        n=934  acc=0.7473  score medio=0.698
+
+DIALETO  PT-PT: n=1077 macro-F1=0.5646 | resto: n=4843 macro-F1=0.7522
+
+  pesos das features estilisticas (auditoria):
+    uppercase_word_ratio     -0.1242
+    excl_rate                +0.0367
+    ellip_rate               +0.0350
+    quest_rate               -0.0038
+
+[ood:whatsapp] treino(n=28122 fake=76.1%) val(n=4963 fake=76.1%) teste(n=6381 fake=47.9%)
+
+### variante ERM (ingenua) — treino n=28122 (fake 76.1%), grupos=9
+  C escolhido=0.3  criterio=macro_f1  val=0.8443
+  Platt a=0.9361 b=-0.6054 | calibrado em n=1465 (prior 47.2% fake, modo=balanced)
+  ECE val 0.0180 -> 0.0074
+
+======================================================================
+ood:whatsapp | variante ERM (ingenua) (calibrado)
+======================================================================
+GLOBAL  n=6381  acc=0.7314  macro-F1=0.7259  F1(fake)=0.7648
+        PR-AUC=0.8050  ROC-AUC=0.8409  Brier=0.1932  ECE=0.1054
+
+POR GRUPO (ordenado do pior para o melhor):
+               group    n  minoria_n  fake_%    acc  macro_f1  f1_fake  roc_auc  pr_auc    ece  confiavel
+FakeWhatsApp.BR_2018 6381       3055 47.9000 0.7314    0.7259   0.7648   0.8409  0.8050 0.1054       True
+
+>>> PIOR GRUPO macro-F1 = 0.7259   (metrica de manchete, so grupos confiaveis)
+>>> PIOR GRUPO (so grupos balanceados) = 0.7259
+    nos grupos balanceados (n=6381, 47.9% fake): acc=0.7314 macro-F1=0.7259 ECE=0.1054
+FALSO PURO        n=27  acc=0.7778  score medio=0.892
+
+  pesos das features estilisticas (auditoria):
+    uppercase_word_ratio     -0.1126
+    ellip_rate               +0.1034
+    excl_rate                +0.1028
+    quest_rate               +0.0489
+
+### variante DFR (honesta) — treino n=8298 (fake 47.2%), grupos=4, ponderado por celula
+  C escolhido=0.01  criterio=worst_group  val=0.7932
+  Platt a=0.8578 b=-0.0257 | calibrado em n=1465 (prior 47.2% fake, modo=balanced)
+  ECE val 0.1643 -> 0.1493
+
+======================================================================
+ood:whatsapp | variante DFR (honesta) (calibrado)
+======================================================================
+GLOBAL  n=6381  acc=0.7779  macro-F1=0.7779  F1(fake)=0.7743
+        PR-AUC=0.8367  ROC-AUC=0.8568  Brier=0.1596  ECE=0.0667
+
+POR GRUPO (ordenado do pior para o melhor):
+               group    n  minoria_n  fake_%    acc  macro_f1  f1_fake  roc_auc  pr_auc    ece  confiavel
+FakeWhatsApp.BR_2018 6381       3055 47.9000 0.7779    0.7779   0.7743   0.8568  0.8367 0.0667       True
+
+>>> PIOR GRUPO macro-F1 = 0.7779   (metrica de manchete, so grupos confiaveis)
+>>> PIOR GRUPO (so grupos balanceados) = 0.7779
+    nos grupos balanceados (n=6381, 47.9% fake): acc=0.7779 macro-F1=0.7779 ECE=0.0667
+FALSO PURO        n=27  acc=0.8519  score medio=0.767
+
+  pesos das features estilisticas (auditoria):
+    uppercase_word_ratio     -0.0633
+    ellip_rate               +0.0532
+    quest_rate               -0.0476
+    excl_rate                +0.0425
+
+[ood:portal] treino(n=27426 fake=76.4%) val(n=4841 fake=76.3%) teste(n=7199 fake=50.0%)
+
+### variante ERM (ingenua) — treino n=27426 (fake 76.4%), grupos=8
+  C escolhido=0.01  criterio=macro_f1  val=0.7850
+  Platt a=0.8586 b=-0.5436 | calibrado em n=1348 (prior 45.4% fake, modo=balanced)
+  ECE val 0.0080 -> 0.0246
+
+======================================================================
+ood:portal | variante ERM (ingenua) (calibrado)
+======================================================================
+GLOBAL  n=7199  acc=0.9721  macro-F1=0.9721  F1(fake)=0.9717
+        PR-AUC=0.9958  ROC-AUC=0.9964  Brier=0.0354  ECE=0.0924
+
+POR GRUPO (ordenado do pior para o melhor):
+      group    n  minoria_n  fake_%    acc  macro_f1  f1_fake  roc_auc  pr_auc    ece  confiavel
+    Fake.br 7160       3580 50.0000 0.9721    0.9721   0.9716   0.9964  0.9958 0.0925       True
+Fake.br_raw   39         19 51.3000 0.9744    0.9744   0.9744   1.0000  1.0000 0.1329      False
+  (grupos com confiavel=False sao pequenos demais — n<100 ou minoria<20 — e ficam fora da manchete)
+
+>>> PIOR GRUPO macro-F1 = 0.9721   (metrica de manchete, so grupos confiaveis)
+>>> PIOR GRUPO (so grupos balanceados) = 0.9721
+    nos grupos balanceados (n=7160, 50.0% fake): acc=0.9721 macro-F1=0.9721 ECE=0.0925
+
+  pesos das features estilisticas (auditoria):
+    quest_rate               +0.0468
+    ellip_rate               +0.0447
+    uppercase_word_ratio     +0.0366
+    excl_rate                +0.0049
+
+### variante DFR (honesta) — treino n=7636 (fake 45.4%), grupos=4, ponderado por celula
+  C escolhido=0.01  criterio=worst_group  val=0.7978
+  Platt a=0.7383 b=-0.0862 | calibrado em n=1348 (prior 45.4% fake, modo=balanced)
+  ECE val 0.1867 -> 0.1565
+
+======================================================================
+ood:portal | variante DFR (honesta) (calibrado)
+======================================================================
+GLOBAL  n=7199  acc=0.9522  macro-F1=0.9522  F1(fake)=0.9507
+        PR-AUC=0.9939  ROC-AUC=0.9937  Brier=0.0440  ECE=0.0669
+
+POR GRUPO (ordenado do pior para o melhor):
+      group    n  minoria_n  fake_%    acc  macro_f1  f1_fake  roc_auc  pr_auc    ece  confiavel
+Fake.br_raw   39         19 51.3000 0.9487    0.9487   0.9474   1.0000  1.0000 0.1283      False
+    Fake.br 7160       3580 50.0000 0.9522    0.9522   0.9507   0.9937  0.9939 0.0667       True
+  (grupos com confiavel=False sao pequenos demais — n<100 ou minoria<20 — e ficam fora da manchete)
+
+>>> PIOR GRUPO macro-F1 = 0.9522   (metrica de manchete, so grupos confiaveis)
+>>> PIOR GRUPO (so grupos balanceados) = 0.9522
+    nos grupos balanceados (n=7160, 50.0% fake): acc=0.9522 macro-F1=0.9522 ECE=0.0667
+
+  pesos das features estilisticas (auditoria):
+    uppercase_word_ratio     -0.0437
+    quest_rate               -0.0401
+    ellip_rate               +0.0248
+    excl_rate                -0.0202
+
+======================================================================
+RESUMO
+======================================================================
+       split       variant    acc  macro_f1  worst_group_macro_f1  worst_group_balanced    ece  hard_acc
+         iid ERM (ingenua) 0.8451    0.8136                0.7474                0.7474 0.0142    0.9306
+         iid DFR (honesta) 0.7345    0.7172                0.7516                0.7516 0.1084    0.6458
+ood:whatsapp ERM (ingenua) 0.7314    0.7259                0.7259                0.7259 0.1054       NaN
+ood:whatsapp DFR (honesta) 0.7779    0.7779                0.7779                0.7779 0.0667       NaN
+  ood:portal ERM (ingenua) 0.9721    0.9721                0.9721                0.9721 0.0924       NaN
+  ood:portal DFR (honesta) 0.9522    0.9522                0.9522                0.9522 0.0669       NaN
+
+resultados salvos em models/artifacts/score_finetuned.json

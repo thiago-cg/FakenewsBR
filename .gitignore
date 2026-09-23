@@ -1,0 +1,24 @@
+# Dados pesados: baixar no Release (ver README). So auditorias pequenas vao ao git.
+data/*.csv
+data/*.json
+data/*.jsonl
+!data/FakenewsBR_v2_factcheck_matches.csv
+!data/FakenewsBR_v2_news_verification.csv
+!data/conflicting_labels_audit.csv
+!data/FakenewsBR_factchecked.csv
+# investigation: brutos e intermediarios pesados ficam fora do git
+investigation/expansion/raw/
+investigation/expansion/processed/records*.jsonl
+investigation/expansion/processed/llm_verify_requests.jsonl
+# clones de referencia (nao redistribuir)
+external/
+# tooling local
+.claude/
+# staging de release (nao versionar)
+dist/
+# python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+*.pid

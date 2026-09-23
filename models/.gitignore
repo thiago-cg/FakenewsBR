@@ -1,3 +1,7 @@
-# Artefatos derivados: pesados e reproduzíveis a partir dos scripts.
-artifacts/
+# Artefatos derivados: pesados vao para o Release; reproduce com os scripts.
+*.safetensors
+*.pt
+*.bin
+*.onnx
+*.npy
 __pycache__/

@@ -1,0 +1,6 @@
+[iid] treino(n=27626 fake=71.5%) val(n=5920 fake=71.5%) teste(n=5920 fake=71.6%)
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:   8%|8         | 17/201 [00:00<00:01, 146.05it/s]Loading weights:  16%|#5        | 32/201 [00:00<00:01, 110.66it/s]Loading weights:  22%|##2       | 45/201 [00:00<00:01, 117.28it/s]Loading weights:  51%|#####1    | 103/201 [00:00<00:00, 276.74it/s]Loading weights: 100%|##########| 201/201 [00:00<00:00, 408.98it/s]
+test: n=5920 acc=0.8655 (6.2 min)
+val: n=5920 acc=0.8698 (6.4 min)
+salvo em models\artifacts\preds_ft_classifier.csv
+exit=0

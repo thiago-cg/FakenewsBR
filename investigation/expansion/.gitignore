@@ -1,0 +1,7 @@
+# Dados brutos e processados da expansao (nao versionar)
+raw/
+processed/
+logs/
+*.jsonl
+*.json
+!processed/collection_plan.json

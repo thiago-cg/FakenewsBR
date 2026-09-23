@@ -1,0 +1,79 @@
+[23:03:54] autoresearch: budget 255 min | [('baseline', {}), ('dfr_off', {'dfr_weights': 'off'}), ('ml128', {'max_length': 128}), ('ml256', {'max_length': 256}), ('freeze0', {'freeze_layers': 0}), ('freeze4', {'freeze_layers': 4}), ('freeze8', {'freeze_layers': 8}), ('mask', {'mask_entities': True}), ('lr1e-5', {'lr': 1e-05}), ('lr3e-5', {'lr': 3e-05}), ('clip05', {'clip': 0.5}), ('warmup0', {'warmup_frac': 0.0}), ('wd0', {'weight_decay': 0.0}), ('droptiers', {'drop_tiers': 'llm_local,corroborated'}), ('informative', {'data_filter': 'informative'}), ('classweights', {'class_weights': True, 'dfr_weights': 'off'}), ('batch16', {'batch_size': 16}), ('seed43', {'seed': 43})] ---
+[23:03:54] === 001_baseline (fase 1) {} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[23:13:28] steps=100 train_loss=0.6577 acc=0.7473 macroF1=0.5415 grpMean=0.4437 grpWorst=0.3277 ECE=0.0967 (574s, 347 tok/s)
+[23:13:28] *** novo melhor: 001_baseline group_mean_macro_f1=0.4437 ***
+[23:13:28] === 002_dfr_off (fase 1) {"dfr_weights": "off"} ===
+[23:22:53] steps=100 train_loss=0.5411 acc=0.7587 macroF1=0.5570 grpMean=0.4622 grpWorst=0.3277 ECE=0.0262 (565s, 352 tok/s)
+[23:22:53] *** novo melhor: 002_dfr_off group_mean_macro_f1=0.4622 ***
+[23:22:53] === 003_ml128 (fase 1) {"max_length": 128} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[23:30:31] steps=100 train_loss=0.6500 acc=0.7273 macroF1=0.5929 grpMean=0.4541 grpWorst=0.3196 ECE=0.0814 (458s, 369 tok/s)
+[23:30:31] === 004_ml256 (fase 1) {"max_length": 256} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[23:41:20] steps=100 train_loss=0.6543 acc=0.7573 macroF1=0.6115 grpMean=0.5089 grpWorst=0.3385 ECE=0.1219 (649s, 344 tok/s)
+[23:41:21] *** novo melhor: 004_ml256 group_mean_macro_f1=0.5089 ***
+[23:41:21] === 005_freeze0 (fase 1) {"freeze_layers": 0} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[23:53:47] steps=100 train_loss=0.6545 acc=0.7430 macroF1=0.5656 grpMean=0.4607 grpWorst=0.3277 ECE=0.0983 (747s, 250 tok/s)
+[23:53:48] === 006_freeze4 (fase 1) {"freeze_layers": 4} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[00:03:56] steps=100 train_loss=0.6543 acc=0.7473 macroF1=0.5631 grpMean=0.4638 grpWorst=0.3277 ECE=0.0908 (608s, 319 tok/s)
+[00:03:57] === 007_freeze8 (fase 1) {"freeze_layers": 8} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[00:12:14] steps=100 train_loss=0.6643 acc=0.7453 macroF1=0.5495 grpMean=0.4501 grpWorst=0.3277 ECE=0.1203 (497s, 411 tok/s)
+[00:12:14] === 008_mask (fase 1) {"mask_entities": true} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[00:21:33] steps=100 train_loss=0.6539 acc=0.7703 macroF1=0.6340 grpMean=0.5360 grpWorst=0.3254 ECE=0.1052 (558s, 364 tok/s)
+[00:21:33] *** novo melhor: 008_mask group_mean_macro_f1=0.5360 ***
+[00:21:33] === 009_lr1e-5 (fase 1) {"lr": 1e-05} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[00:30:34] steps=100 train_loss=0.6790 acc=0.7410 macroF1=0.4551 grpMean=0.3817 grpWorst=0.2966 ECE=0.1294 (541s, 368 tok/s)
+[00:30:34] === 010_lr3e-5 (fase 1) {"lr": 3e-05} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[00:39:37] steps=100 train_loss=0.6427 acc=0.7473 macroF1=0.6354 grpMean=0.5126 grpWorst=0.3277 ECE=0.0546 (543s, 367 tok/s)
+[00:39:38] === 011_clip05 (fase 1) {"clip": 0.5} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[00:48:40] steps=100 train_loss=0.6587 acc=0.7453 macroF1=0.5488 grpMean=0.4488 grpWorst=0.3277 ECE=0.1026 (542s, 367 tok/s)
+[00:48:40] === 012_warmup0 (fase 1) {"warmup_frac": 0.0} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[00:57:47] steps=100 train_loss=0.6474 acc=0.7360 macroF1=0.6442 grpMean=0.5180 grpWorst=0.3492 ECE=0.0889 (547s, 363 tok/s)
+[00:57:48] === 013_wd0 (fase 1) {"weight_decay": 0.0} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[01:06:52] steps=100 train_loss=0.6577 acc=0.7460 macroF1=0.5368 grpMean=0.4405 grpWorst=0.3277 ECE=0.0950 (545s, 366 tok/s)
+[01:06:53] === 014_droptiers (fase 1) {"drop_tiers": "llm_local,corroborated"} ===
+[E5] DFR cell: antes clip min=0.0920 max=102.81 prior_fake_efetivo=0.5957 | depois clip(25.0): min=0.1079 max=29.30 prior_fake_efetivo=0.6462
+[01:16:11] steps=100 train_loss=0.6190 acc=0.7517 macroF1=0.5690 grpMean=0.4759 grpWorst=0.3492 ECE=0.0221 (559s, 368 tok/s)
+[01:16:12] === 015_informative (fase 1) {"data_filter": "informative"} ===
+[E5] DFR cell: antes clip min=0.3265 max=42.23 prior_fake_efetivo=0.5000 | depois clip(25.0): min=0.3351 max=25.65 prior_fake_efetivo=0.4869
+[01:29:50] steps=100 train_loss=0.6714 acc=0.5290 macroF1=0.5174 grpMean=0.6172 grpWorst=0.4870 ECE=0.0389 (818s, 362 tok/s)
+[01:29:51] *** novo melhor: 015_informative group_mean_macro_f1=0.6172 ***
+[01:29:51] === 016_classweights (fase 1) {"class_weights": true, "dfr_weights": "off"} ===
+[E5] class_weights ativos: true=1.874 fake=0.682 (degrada a calibracao; ablate/medido apenas)
+[01:38:56] steps=100 train_loss=0.6347 acc=0.7290 macroF1=0.6702 grpMean=0.5263 grpWorst=0.4402 ECE=0.0589 (545s, 366 tok/s)
+[01:38:56] === 017_batch16 (fase 1) {"batch_size": 16} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[01:44:55] steps=100 train_loss=0.6341 acc=0.7400 macroF1=0.4445 grpMean=0.3719 grpWorst=0.3025 ECE=0.0872 (359s, 330 tok/s)
+[01:44:55] === 018_seed43 (fase 1) {"seed": 43} ===
+[E5] DFR cell: antes clip min=0.0933 max=104.17 prior_fake_efetivo=0.5833 | depois clip(25.0): min=0.1052 max=28.20 prior_fake_efetivo=0.6081
+[01:54:37] steps=100 train_loss=0.6218 acc=0.7323 macroF1=0.6077 grpMean=0.4658 grpWorst=0.3000 ECE=0.0928 (582s, 364 tok/s)
+[01:54:38] === 019_max_length=128 (fase 2) {"max_length": 128, "batch_size": 32, "lr": 2e-05, "warmup_frac": 0.1, "weight_decay": 0.01, "clip": 1.0, "freeze_layers": 6, "dfr_weights": "cell", "weight_clip": 25.0, "class_weights": false, "mask_entities": false, "drop_tiers": "", "data_filter": "informative", "steps": 100, "seed": 42, "train_n": 5000, "eval_n": 3000, "eval_batch_size": 64} ===
+[E5] DFR cell: antes clip min=0.3265 max=42.23 prior_fake_efetivo=0.5000 | depois clip(25.0): min=0.3351 max=25.65 prior_fake_efetivo=0.4869
+[02:05:22] steps=100 train_loss=0.6616 acc=0.5047 macroF1=0.4984 grpMean=0.5790 grpWorst=0.4354 ECE=0.0644 (644s, 372 tok/s)
+[02:05:22] === 020_max_length=256 (fase 2) {"max_length": 256, "batch_size": 32, "lr": 2e-05, "warmup_frac": 0.1, "weight_decay": 0.01, "clip": 1.0, "freeze_layers": 6, "dfr_weights": "cell", "weight_clip": 25.0, "class_weights": false, "mask_entities": false, "drop_tiers": "", "data_filter": "informative", "steps": 100, "seed": 42, "train_n": 5000, "eval_n": 3000, "eval_batch_size": 64} ===
+[E5] DFR cell: antes clip min=0.3265 max=42.23 prior_fake_efetivo=0.5000 | depois clip(25.0): min=0.3351 max=25.65 prior_fake_efetivo=0.4869
+[02:21:51] steps=100 train_loss=0.6649 acc=0.5500 macroF1=0.5394 grpMean=0.6226 grpWorst=0.4998 ECE=0.0212 (989s, 345 tok/s)
+[02:21:51] *** novo melhor: 020_max_length=256 group_mean_macro_f1=0.6226 ***
+[02:21:51] [fase2] eixo max_length: adotado max_length=256
+[02:21:51] === 021_freeze_layers=0 (fase 2) {"max_length": 256, "batch_size": 32, "lr": 2e-05, "warmup_frac": 0.1, "weight_decay": 0.01, "clip": 1.0, "freeze_layers": 0, "dfr_weights": "cell", "weight_clip": 25.0, "class_weights": false, "mask_entities": false, "drop_tiers": "", "data_filter": "informative", "steps": 100, "seed": 42, "train_n": 5000, "eval_n": 3000, "eval_batch_size": 64} ===
+[E5] DFR cell: antes clip min=0.3265 max=42.23 prior_fake_efetivo=0.5000 | depois clip(25.0): min=0.3351 max=25.65 prior_fake_efetivo=0.4869
+[02:43:21] steps=100 train_loss=0.6544 acc=0.5397 macroF1=0.5321 grpMean=0.6244 grpWorst=0.5042 ECE=0.0318 (1289s, 256 tok/s)
+[02:43:21] *** novo melhor: 021_freeze_layers=0 group_mean_macro_f1=0.6244 ***
+[02:43:21] === 022_freeze_layers=4 (fase 2) {"max_length": 256, "batch_size": 32, "lr": 2e-05, "warmup_frac": 0.1, "weight_decay": 0.01, "clip": 1.0, "freeze_layers": 4, "dfr_weights": "cell", "weight_clip": 25.0, "class_weights": false, "mask_entities": false, "drop_tiers": "", "data_filter": "informative", "steps": 100, "seed": 42, "train_n": 5000, "eval_n": 3000, "eval_batch_size": 64} ===
+[E5] DFR cell: antes clip min=0.3265 max=42.23 prior_fake_efetivo=0.5000 | depois clip(25.0): min=0.3351 max=25.65 prior_fake_efetivo=0.4869
+[03:01:26] steps=100 train_loss=0.6622 acc=0.5507 macroF1=0.5389 grpMean=0.6220 grpWorst=0.5042 ECE=0.0346 (1085s, 310 tok/s)
+[03:01:26] === 023_freeze_layers=8 (fase 2) {"max_length": 256, "batch_size": 32, "lr": 2e-05, "warmup_frac": 0.1, "weight_decay": 0.01, "clip": 1.0, "freeze_layers": 8, "dfr_weights": "cell", "weight_clip": 25.0, "class_weights": false, "mask_entities": false, "drop_tiers": "", "data_filter": "informative", "steps": 100, "seed": 42, "train_n": 5000, "eval_n": 3000, "eval_batch_size": 64} ===
+[E5] DFR cell: antes clip min=0.3265 max=42.23 prior_fake_efetivo=0.5000 | depois clip(25.0): min=0.3351 max=25.65 prior_fake_efetivo=0.4869
+[03:16:23] steps=100 train_loss=0.6739 acc=0.5417 macroF1=0.5318 grpMean=0.6159 grpWorst=0.4876 ECE=0.0118 (897s, 386 tok/s)
+[03:16:23] [fase2] eixo freeze_layers: adotado freeze_layers=0
+[03:16:23] [fim] 23 runs | status=concluido | VERDICT em C:\Users\tito\OneDrive\Documentos\Projetos\FakenewsBR\models\v6\autoresearch\VERDICT.md

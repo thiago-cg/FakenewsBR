@@ -1,0 +1,163 @@
+{
+  "run_id": "bal_iid_ml192_f6_off_seed42_smoke",
+  "created_utc": "2026-09-12T16:15:37Z",
+  "config": {
+    "args": {
+      "prepare": false,
+      "sanitized": "FakenewsBR_sanitized_v4.csv",
+      "labels": "FakenewsBR_v4_labels.csv",
+      "provenance": "FakenewsBR_v4_provenance.csv",
+      "out_dir": "models/v4/processed",
+      "data": "models/v4/processed/v4_pool.parquet",
+      "splits": "models/v4/processed/v4_splits.parquet",
+      "split_col": "bal_iid",
+      "eval_col": "bal_iid",
+      "eval_value": "test",
+      "out": "models/v4/artifacts/smoke_probe",
+      "drive_out": null,
+      "run_id": "bal_iid_ml192_f6_off_seed42_smoke",
+      "model": "neuralmind/bert-base-portuguese-cased",
+      "max_length": 128,
+      "batch_size": 8,
+      "eval_batch_size": 32,
+      "grad_accum": 1,
+      "epochs": 1,
+      "patience": 1,
+      "min_delta": 0.005,
+      "best_metric": "worst_group",
+      "lr": 2e-05,
+      "warmup_frac": 0.1,
+      "weight_decay": 0.01,
+      "clip": 1.0,
+      "freeze_layers": 6,
+      "seed": 42,
+      "dfr_weights": "off",
+      "weight_clip": 25.0,
+      "class_weights": false,
+      "mask_entities": false,
+      "drop_tiers": "",
+      "amp": "off",
+      "device": "cpu",
+      "workers": 0,
+      "calib_col": "val_calib",
+      "threshold_primary": 0.5,
+      "save_every_epoch": "both",
+      "predict_all": false,
+      "token_stats": false,
+      "resume": false,
+      "force_resume": false,
+      "smoke": true,
+      "smoke_n": 32,
+      "ablate": "none",
+      "probe_max_length": 256,
+      "check_vendor": false
+    },
+    "ablate": "none",
+    "loss_info": {},
+    "versions": {
+      "torch": "2.14.0+cpu",
+      "transformers": "5.17.0"
+    },
+    "script_sha256": "1d7d8a4124a06b3c0da89be83568377c102624de1ad3262ef0a52c80cb5af491"
+  },
+  "data": {
+    "data_sha256": "8c1cc28ec2b49e5f6476352ed5fedfcbc8b2bfdd83a28b1207761e9d81e83212",
+    "splits_sha256": "b05f61da756bcdd9a7d3e4ce6f8d3ee184152504a5ee3f76ff327e03c6f95faa",
+    "split_col": "bal_iid",
+    "eval_col": "bal_iid",
+    "eval_value": "test",
+    "n_train": 32,
+    "n_val_sel": 32,
+    "n_val_calib": 32,
+    "n_test": 32,
+    "train_fake_pct": 53.12,
+    "smoke": true
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.6929,
+      "val_loss": 0.69146,
+      "val_macro_f1": 0.34694,
+      "val_f1_fake": 0.69388,
+      "val_worst_group": null,
+      "val_ece": 0.12423,
+      "tokens_per_s": 276.6,
+      "samples_per_s": 4.83,
+      "lr_last": 0.0,
+      "scaler_scale": 0.0,
+      "vram_peak_gb": 0.0,
+      "seconds": 10.4,
+      "best_so_far": true
+    }
+  ],
+  "best_epoch": 1,
+  "calibration": {
+    "platt_a": 3.0676001448915575,
+    "platt_b": -1.0844706208339727,
+    "calib_n": 32,
+    "calib_prior_fake": 0.53125,
+    "ece_before": 0.12625926085142272,
+    "ece_after": 0.06730952200322694,
+    "threshold": 0.5,
+    "threshold_val_opt": 0.5200000000000001
+  },
+  "test": {
+    "n": 32,
+    "acc": 0.78125,
+    "macro_f1": 0.7810361681329423,
+    "f1_fake": 0.7878787878787878,
+    "brier": 0.21184330038282145,
+    "ece": 0.18104856316873397,
+    "roc_auc": 0.7607843137254902,
+    "pr_auc": 0.7363689279130456
+  },
+  "test_at_val_threshold": {
+    "n": 32,
+    "acc": 0.75,
+    "macro_f1": 0.75,
+    "f1_fake": 0.75,
+    "brier": 0.21184330038282145,
+    "ece": 0.18104856316873397,
+    "roc_auc": 0.7607843137254902,
+    "pr_auc": 0.7363689279130456
+  },
+  "ood": null,
+  "cuts": {
+    "channel": [],
+    "publisher": [],
+    "era": [],
+    "label_tier": [],
+    "lang_variant_rule": {
+      "n_ptpt": 10,
+      "macro_f1_ptpt": null
+    },
+    "lang_variant_prov": [
+      {
+        "lang_variant": "desconhecido",
+        "n": 13,
+        "fake_pct": 0.5384615384615384
+      },
+      {
+        "lang_variant": "pt-BR",
+        "n": 19,
+        "fake_pct": 0.5263157894736842
+      }
+    ]
+  },
+  "constant_groups_diagnostic": [],
+  "timing": {
+    "tokenize_s": 0.029098099999828264,
+    "train_s": 6.622162599989679,
+    "eval_s": 12.171900699991966,
+    "total_s": 31.733476099994732
+  },
+  "hardware": {
+    "device": "cpu",
+    "gpu": null,
+    "capability": null,
+    "torch": "2.14.0+cpu",
+    "transformers": "5.17.0",
+    "cuda": null
+  }
+}

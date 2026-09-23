@@ -1,0 +1,77 @@
+{
+  "tokenizer": "neuralmind/bert-base-portuguese-cased",
+  "add_special_tokens": true,
+  "truncation": false,
+  "distributions": {
+    "informativos": {
+      "n": 36894,
+      "mean": 119.65,
+      "p50": 33.0,
+      "p90": 308.0,
+      "p95": 453.0,
+      "p99": 1046.07,
+      "max": 8575,
+      "pct_gt_128": 25.47,
+      "pct_gt_192": 18.82,
+      "pct_gt_256": 13.02,
+      "pct_gt_512": 4.06
+    },
+    "train": {
+      "n": 25825,
+      "mean": 120.81,
+      "p50": 33.0,
+      "p90": 308.0,
+      "p95": 453.0,
+      "p99": 1081.76,
+      "max": 8575,
+      "pct_gt_128": 25.57,
+      "pct_gt_192": 18.97,
+      "pct_gt_256": 13.11,
+      "pct_gt_512": 4.09,
+      "split_col": "bal_iid"
+    }
+  },
+  "cost": {
+    "128": {
+      "cap": 128,
+      "batch_size": 32,
+      "mega": 50,
+      "tokens_pagos_por_epoca": 1546080,
+      "tokens_pagos_por_epoca_milhoes": 1.546,
+      "media_por_amostra": 59.87,
+      "n_batches": 808,
+      "pct_batches_no_cap": 26.61
+    },
+    "192": {
+      "cap": 192,
+      "batch_size": 32,
+      "mega": 50,
+      "tokens_pagos_por_epoca": 1932224,
+      "tokens_pagos_por_epoca_milhoes": 1.932,
+      "media_por_amostra": 74.82,
+      "n_batches": 808,
+      "pct_batches_no_cap": 20.17
+    },
+    "256": {
+      "cap": 256,
+      "batch_size": 32,
+      "mega": 50,
+      "tokens_pagos_por_epoca": 2213728,
+      "tokens_pagos_por_epoca_milhoes": 2.214,
+      "media_por_amostra": 85.72,
+      "n_batches": 808,
+      "pct_batches_no_cap": 14.23
+    }
+  },
+  "cap_tokens_pagos_por_epoca": {
+    "128": 1546080,
+    "192": 1932224,
+    "256": 2213728
+  },
+  "razao_256_192": 1.1457,
+  "assumptions": {
+    "batching": "length_grouped_batches(batch=32, mega=50, seed=42), comprimentos truncados no cap",
+    "tokens_pagos": "sum(len(batch) * max(len_no_batch))"
+  },
+  "tokenize_seconds_total": 3.57
+}

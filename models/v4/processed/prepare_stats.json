@@ -1,0 +1,364 @@
+{
+  "created_utc": "2026-09-12T15:36:26Z",
+  "script": "C:\\Users\\tito\\OneDrive\\Documentos\\Projetos\\FakenewsBR\\models\\v4\\prepare_v4.py",
+  "seed": 42,
+  "inputs": {
+    "sanitized": {
+      "path": "C:\\Users\\tito\\OneDrive\\Documentos\\Projetos\\FakenewsBR\\FakenewsBR_sanitized_v4.csv",
+      "sha256": "b619e34e7eab7b805906f4feeb53f4129d832516d8198b16491a309650d42a84"
+    },
+    "labels": {
+      "path": "C:\\Users\\tito\\OneDrive\\Documentos\\Projetos\\FakenewsBR\\FakenewsBR_v4_labels.csv",
+      "sha256": "91eccda0b2fc05cc06e134902d69ca248d220ea017d9aff8998a7b9734b35734"
+    },
+    "provenance": {
+      "path": "C:\\Users\\tito\\OneDrive\\Documentos\\Projetos\\FakenewsBR\\FakenewsBR_v4_provenance.csv",
+      "sha256": "0ecebb993eab7e47433b4c5dc8a6217462a68c72151e0e3c0a92f6b24ecfa64f"
+    }
+  },
+  "load_seconds": 12.7,
+  "counts": {
+    "pool_raw": 85212,
+    "fake_raw": 60991,
+    "true_raw": 24221,
+    "pool": 85212,
+    "fake": 60991,
+    "true": 24221,
+    "fake_pct": 71.58,
+    "informativos": 36896,
+    "informativos_fake_pct": 51.98,
+    "constant_groups": 39351,
+    "ufffd_marked": 4,
+    "ufffd_rids": [
+      11447,
+      16958,
+      836990361129089716,
+      839894016325789543
+    ],
+    "ufffd_policy": "linhas U+FFFD ficam no pool marcadas has_ufffd=True e sao removidas do treino/eval pelo train_bertimbau_v4.py (E2). Remocao no prepare quebraria as contagens canonicas do PLANO 1.1/2.1 (2 dos 4 rids sao informativos); desvio documentado em models/v4/BUILD_NOTES.md.",
+    "mojibake_flagged": 32
+  },
+  "splits": {
+    "split_bal_iid": {
+      "train": {
+        "n": 25827,
+        "fake": 13423,
+        "true": 12404,
+        "fake_pct": 51.97
+      },
+      "val_sel": {
+        "n": 3689,
+        "fake": 1918,
+        "true": 1771,
+        "fake_pct": 51.99
+      },
+      "val_calib": {
+        "n": 1845,
+        "fake": 959,
+        "true": 886,
+        "fake_pct": 51.98
+      },
+      "test": {
+        "n": 5535,
+        "fake": 2877,
+        "true": 2658,
+        "fake_pct": 51.98
+      },
+      "unused": {
+        "n": 48316,
+        "fake": 41814,
+        "true": 6502,
+        "fake_pct": 86.54
+      },
+      "_null": 0
+    },
+    "split_bal_ood_wa": {
+      "train": {
+        "n": 25937,
+        "fake": 13703,
+        "true": 12234,
+        "fake_pct": 52.83
+      },
+      "val_sel": {
+        "n": 3052,
+        "fake": 1613,
+        "true": 1439,
+        "fake_pct": 52.85
+      },
+      "val_calib": {
+        "n": 1526,
+        "fake": 806,
+        "true": 720,
+        "fake_pct": 52.82
+      },
+      "test": {
+        "n": 6381,
+        "fake": 3055,
+        "true": 3326,
+        "fake_pct": 47.88
+      },
+      "unused": {
+        "n": 48316,
+        "fake": 41814,
+        "true": 6502,
+        "fake_pct": 86.54
+      },
+      "_null": 0
+    },
+    "split_full_iid": {
+      "train": {
+        "n": 67725,
+        "fake": 49397,
+        "true": 18328,
+        "fake_pct": 72.94
+      },
+      "val_sel": {
+        "n": 7968,
+        "fake": 5811,
+        "true": 2157,
+        "fake_pct": 72.93
+      },
+      "val_calib": {
+        "n": 3984,
+        "fake": 2906,
+        "true": 1078,
+        "fake_pct": 72.94
+      },
+      "test": {
+        "n": 0,
+        "fake": 0,
+        "true": 0,
+        "fake_pct": 0.0
+      },
+      "unused": {
+        "n": 5535,
+        "fake": 2877,
+        "true": 2658,
+        "fake_pct": 51.98
+      },
+      "_null": 0
+    }
+  },
+  "validation": {
+    "checks": {
+      "pool_raw_85212": {
+        "ok": true,
+        "got": 85212,
+        "want": 85212,
+        "name": "pool_raw"
+      },
+      "fake_raw_60991": {
+        "ok": true,
+        "got": 60991,
+        "want": 60991,
+        "name": "fake_raw"
+      },
+      "true_raw_24221": {
+        "ok": true,
+        "got": 24221,
+        "want": 24221,
+        "name": "true_raw"
+      },
+      "rid_unico": {
+        "name": "rid_unico",
+        "ok": true,
+        "got": 85212,
+        "want": 85212
+      },
+      "ufffd_4": {
+        "ok": true,
+        "got": 4,
+        "want": 4,
+        "name": "ufffd"
+      },
+      "informativos_36896": {
+        "ok": true,
+        "got": 36896,
+        "want": 36896,
+        "name": "informativos"
+      },
+      "constantes_39351": {
+        "ok": true,
+        "got": 39351,
+        "want": 39351,
+        "name": "constantes"
+      },
+      "split_bal_iid.train": {
+        "ok": true,
+        "got": 25827,
+        "want": 25827,
+        "name": "split_bal_iid.train"
+      },
+      "split_bal_iid.val_sel": {
+        "ok": true,
+        "got": 3689,
+        "want": 3689,
+        "name": "split_bal_iid.val_sel"
+      },
+      "split_bal_iid.val_calib": {
+        "ok": true,
+        "got": 1845,
+        "want": 1845,
+        "name": "split_bal_iid.val_calib"
+      },
+      "split_bal_iid.test": {
+        "ok": true,
+        "got": 5535,
+        "want": 5535,
+        "name": "split_bal_iid.test"
+      },
+      "split_bal_iid.unused": {
+        "ok": true,
+        "got": 48316,
+        "want": 48316,
+        "name": "split_bal_iid.unused"
+      },
+      "split_bal_ood_wa.train": {
+        "ok": true,
+        "got": 25937,
+        "want": 25937,
+        "name": "split_bal_ood_wa.train"
+      },
+      "split_bal_ood_wa.val_sel": {
+        "ok": true,
+        "got": 3052,
+        "want": 3052,
+        "name": "split_bal_ood_wa.val_sel"
+      },
+      "split_bal_ood_wa.val_calib": {
+        "ok": true,
+        "got": 1526,
+        "want": 1526,
+        "name": "split_bal_ood_wa.val_calib"
+      },
+      "split_bal_ood_wa.test": {
+        "ok": true,
+        "got": 6381,
+        "want": 6381,
+        "name": "split_bal_ood_wa.test"
+      },
+      "split_bal_ood_wa.unused": {
+        "ok": true,
+        "got": 48316,
+        "want": 48316,
+        "name": "split_bal_ood_wa.unused"
+      },
+      "split_full_iid.train": {
+        "ok": true,
+        "got": 67725,
+        "want": 67725,
+        "name": "split_full_iid.train"
+      },
+      "split_full_iid.val_sel": {
+        "ok": true,
+        "got": 7968,
+        "want": 7968,
+        "name": "split_full_iid.val_sel"
+      },
+      "split_full_iid.val_calib": {
+        "ok": true,
+        "got": 3984,
+        "want": 3984,
+        "name": "split_full_iid.val_calib"
+      },
+      "split_full_iid.test": {
+        "ok": true,
+        "got": 0,
+        "want": 0,
+        "name": "split_full_iid.test"
+      },
+      "split_full_iid.unused": {
+        "ok": true,
+        "got": 5535,
+        "want": 5535,
+        "name": "split_full_iid.unused"
+      },
+      "holdout_x_teste.train": {
+        "ok": true,
+        "got": 0,
+        "want": 0,
+        "name": "holdout_x_teste.train"
+      },
+      "holdout_x_teste.val_sel": {
+        "ok": true,
+        "got": 0,
+        "want": 0,
+        "name": "holdout_x_teste.val_sel"
+      },
+      "holdout_x_teste.val_calib": {
+        "ok": true,
+        "got": 0,
+        "want": 0,
+        "name": "holdout_x_teste.val_calib"
+      },
+      "full_train_x_teste_conf": {
+        "ok": true,
+        "got": 0,
+        "want": 0,
+        "name": "full_train_x_teste_conf"
+      },
+      "sem_nulos": {
+        "name": "sem_nulos",
+        "ok": true,
+        "got": {
+          "split_bal_iid": 0,
+          "split_bal_ood_wa": 0,
+          "split_full_iid": 0
+        },
+        "want": {
+          "split_bal_iid": 0,
+          "split_bal_ood_wa": 0,
+          "split_full_iid": 0
+        }
+      },
+      "info_sem_unused_bal_iid": {
+        "ok": true,
+        "got": 0,
+        "want": 0,
+        "name": "info_sem_unused_bal_iid"
+      },
+      "ood_test_e_whatsapp": {
+        "ok": true,
+        "got": 0,
+        "want": 0,
+        "name": "ood_test_e_whatsapp"
+      },
+      "parquet_le_25mb": {
+        "name": "parquet_le_25mb",
+        "ok": true,
+        "got": 16.72,
+        "want": 25.0
+      }
+    },
+    "all_pass": true,
+    "failed": []
+  },
+  "near_dup_probe": {
+    "metric": "5-gram word shingles, Jaccard exato na amostra (indice invertido)",
+    "n_train_sample": 5000,
+    "n_test_sample": 5000,
+    "n_pares_com_intersecao": 4488,
+    "max_jaccard": 0.99665,
+    "n_pares_gt_0.8": 141,
+    "seconds": 1.5
+  },
+  "sha256": {
+    "v4_pool.parquet": "8c1cc28ec2b49e5f6476352ed5fedfcbc8b2bfdd83a28b1207761e9d81e83212",
+    "v4_splits.parquet": "b05f61da756bcdd9a7d3e4ce6f8d3ee184152504a5ee3f76ff327e03c6f95faa"
+  },
+  "files": {
+    "v4_pool.parquet": "C:\\Users\\tito\\OneDrive\\Documentos\\Projetos\\FakenewsBR\\models\\v4\\processed\\v4_pool.parquet",
+    "v4_splits.parquet": "C:\\Users\\tito\\OneDrive\\Documentos\\Projetos\\FakenewsBR\\models\\v4\\processed\\v4_splits.parquet",
+    "v4_pool_bytes": 16718463,
+    "v4_splits_bytes": 753099
+  },
+  "versions": {
+    "python": "3.13.15",
+    "pandas": "3.0.5",
+    "numpy": "2.4.6",
+    "sklearn": "1.9.0",
+    "pyarrow": "25.0.1",
+    "torch": "2.14.0+cpu"
+  },
+  "total_seconds": 38.8
+}
