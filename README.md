@@ -26,6 +26,7 @@ anti-atalho (splits por cluster, DFR, calibração Platt, avaliação por grupo)
 README.md / LICENSE          este arquivo; código MIT
 data/                        CSVs/JSONs (os grandes ficam NO RELEASE, ver §Dados)
 docs/                        relatórios e cards (dataset/, v4/, v6/, pipeline-legado.md)
+docs/EDA.md                  EDA consolidada (8 trilhas + medições posteriores)
 docs/RELATORIO*.md           prestação de contas anterior (pipeline legado)
 scripts/                     sanitize_dataset.py (v1), eda_analysis.py
 models/                      pipeline legado (data/embed/encoder/score/evaluate)
@@ -69,6 +70,8 @@ Entradas com SHA256 registrado (`models/v6/processed/prepare_stats.json`):
 (quota do LFS gratuito: 1 GB) — copie para `data/` e rode o §Reprodução.
 
 ## Análise exploratória — achados
+
+> Consolidação completa (8 trilhas, atalhos e correções) em [`docs/EDA.md`](docs/EDA.md).
 
 1. **Atalho de procedência**: 11 grupos constantes (ex.: `fakes` 20.347 linhas
    100% fake, `true` 2.710 100% true). Quem treina ERM aprende "origem",
