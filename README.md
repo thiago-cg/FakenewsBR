@@ -128,6 +128,8 @@ Entradas com SHA256 registrado (`legacy/models/v6/processed/prepare_stats.json`)
 
 ## Análise exploratória — achados
 
+> Consolidação completa (8 trilhas, atalhos e correções) em [`docs/EDA.md`](docs/EDA.md).
+
 1. **Atalho de procedência**: 11 grupos constantes (ex.: `fakes` 20.347 linhas
    100% fake, `true` 2.710 100% true). Quem treina ERM aprende "origem",
    não semântica. Resposta: treino **DFR** (só grupos informativos, pesos
